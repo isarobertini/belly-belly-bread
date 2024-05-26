@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'josefin-sans': ['Josefin Sans', 'sans-serif'],
+        'moo-lah-lah': ['Moo Lah Lah', 'cursive'], // Add the custom font here
+        'creepster-regular': ['Creepster', 'system-ui'],
+      },
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Import the custom font */
+@font-face {
+  font-family: 'Creepster';
+  src: url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('woff2'),
+    url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('woff'),
+    url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1,
+h2 {
+  font-family: 'creepster-regular';
+  /* Add any additional styles you want for all h1 elements */
+}
+
+.custom-font {
+  font-family: 'creepster-regular';
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
