@@ -7,9 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'josefin-sans': ['Josefin Sans', 'sans-serif'],
-        'moo-lah-lah': ['Moo Lah Lah', 'cursive'], // Add the custom font here
-        'creepster-regular': ['Creepster', 'system-ui'],
+        'oxygen-mono': ['Oxygen Mono', 'monospace'],
+      },
+      colors: {
+        'pink-light': '#FBACE9',
+        'pink-bright': '#FF0BA2',
+        'yellow-bright': '#FFF443',
+        'orange-bright': '#FF7800',
+        'brown-dark': '#663812',
+        'brown-light': '#8D5222',
       },
     },
   },

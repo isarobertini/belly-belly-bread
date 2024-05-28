@@ -1,25 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Covered+By+Your+Grace&family=Oxygen+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap');
 
 /* Import the custom font */
 @font-face {
-  font-family: 'Creepster';
-  src: url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('woff2'),
-    url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('woff'),
-    url('https://fonts.googleapis.com/css2?family=Creepster&display=swap') format('truetype');
+  font-family: 'oxygen-mono';
+  src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Covered+By+Your+Grace&family=Oxygen+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap');
+  font-family: "Oxygen Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-
-h1,
-h2 {
-  font-family: 'creepster-regular';
-  /* Add any additional styles you want for all h1 elements */
-}
-
-.custom-font {
-  font-family: 'creepster-regular';
 }
 
 @tailwind base;

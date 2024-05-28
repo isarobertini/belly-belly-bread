@@ -9,17 +9,17 @@ export const NavigationMenu = () => {
     };
 
     return (
-        <div className={`h-24 flex items-center justify-between px-6 top-0 z-20`}>
+        <div className={`bg-pink-light h-24 text-brown-dark flex items-center justify-between px-6 top-0 z-20`}>
             {/* Navigation */}
-            <nav className="flex w-full justify-between lg:justify-start">
+            <nav className="flex w-full justify-between lg:justify-center text-2xl">
                 {/* Desktop Menu */}
                 <ul className="desktop-menu hidden space-x-8 lg:flex">
-                    <NavItem to="/" label="BellyBelly Home" />
-                    <NavItem to="/exercises" label="Exercises" />
-                    <NavItem to="/heddaReading" label="HeddaReading" />
-                    <NavItem to="/bellyBellyBreadPoem" label="BellyBellyBreadPoem" />
-                    <NavItem to="/sketches" label="Sketches" />
-                    <NavItem to="/aboutBellyBellyBread" label="About BellyBellyBread" />
+                    <NavItem to="/" label="Belly Belly Bread" />
+                    <NavItem to="/performance" label="Performance" />
+                    <NavItem to="/thecookbook" label="The Cookbook" />
+                    <NavItem to="/references" label="References" />
+                    <NavItem to="/collaborations" label="Collaborations" />
+                    <NavItem to="/about" label="About" />
                 </ul>
 
                 {/* Mobile Menu */}
@@ -53,13 +53,13 @@ export const NavigationMenu = () => {
                         </div>
 
                         {/* Mobile Menu Items */}
-                        <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                            <NavItem to="/" label="BellyBelly Home" />
-                            <NavItem to="/exercises" label="Exercises" />
-                            <NavItem to="/heddaReading" label="HeddaReading" />
-                            <NavItem to="/bellyBellyBreadPoem" label="BellyBellyBreadPoem" />
-                            <NavItem to="/sketches" label="Sketches" />
-                            <NavItem to="/aboutBellyBellyBread" label="About BellyBellyBread" />
+                        <ul className="text-brown-dark flex flex-col items-center justify-between min-h-[250px]">
+                            <NavItem to="/" label="Belly Belly Bread" />
+                            <NavItem to="/performance" label="Performance" />
+                            <NavItem to="/thecookbook" label="The Cookbook" />
+                            <NavItem to="/references" label="References" />
+                            <NavItem to="/collaborations" label="Collaborations" />
+                            <NavItem to="/about" label="About" />
                         </ul>
                     </div>
                 </section>
@@ -77,7 +77,7 @@ export const NavigationMenu = () => {
                     height: 100vh;
                     top: 0;
                     left: 0;
-                    background: white;
+                    background: #FFF443;
                     z-index: 10;
                     flex-direction: column;
                     justify-content: space-evenly;
@@ -93,7 +93,7 @@ export const NavigationMenu = () => {
         const isCurrentPage = location.pathname === to;
 
         return (
-            <li className={`p-8 ${isCurrentPage ? 'underline decoration-4' : 'hover:text-pink-600'} transition-all duration-500`}>
+            <li className={`p-8 ${isCurrentPage ? 'underline decoration-4 text-pink-bright' : 'hover:text-pink-bright'} transition-all duration-500`}>
                 <Link to={to}>{label}</Link>
             </li>
         );

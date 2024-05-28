@@ -1,22 +1,21 @@
 import { Route } from "react-router-dom";
 
 import { Home } from "../pages/Home";
-import { Exercises } from "../pages/Exercises";
-import { HeddaReading } from "../pages/HeddaReading";
-import { BreadPoem } from "../pages/BreadPoem";
+import { Performance } from "../pages/Performance";
+import { References } from "../pages/References";
 import { NotFound } from "../pages/NotFound";
-import { Sketches } from "../pages/Sketches";
+import { Collaborations } from "../pages/Collaborations";
 import { About } from "../pages/About";
+import { TheCookbook } from "../pages/TheCookbook";
 
 const routes = (
     <>
         <Route path="/" element={<Home />} />
-        <Route path="/exercises" element={<Exercises />} />
-        <Route path="/heddaReading" element={<HeddaReading />} />
-        <Route path="/bellyBellyBreadPoem" element={<BreadPoem />} />
-        <Route path="/sketches" element={<Sketches />} />
-        <Route path="/aboutBellyBellyBread" element={<About />} />
-
+        <Route path="/performance" element={<Performance />} />
+        <Route path="/references" element={<References />} />
+        <Route path="/collaborations" element={<Collaborations />} />
+        <Route path="/theCookBook" element={<TheCookbook />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
     </>
 );
