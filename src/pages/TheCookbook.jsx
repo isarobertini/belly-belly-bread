@@ -4,6 +4,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { NumberCircleComponent } from "../reusableComponents/numberCircleComponent";
+import { ResponsivePDF } from "../reusableComponents/ResponsivePDF";
 
 import Letter from "../assets/cookBook/letter.webp";
 import Kokbok from "../assets/cookBook/Bakverk.pdf";
@@ -41,10 +42,11 @@ export const TheCookbook = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center bg-brown-dark">
+            <div className="">
                 <object className="my-6 h-screen w-11/12 lg:w-6/12" data={Kokbok} type="application/pdf" aria-label="The Cookbook PDF">
                     <p>Your browser does not support PDFs. Download the PDF to view it: <a href={Kokbok}>Download PDF</a>.</p>
                 </object>
+                <ResponsivePDF />
             </div>
         </>
     );
