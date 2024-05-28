@@ -63,8 +63,9 @@ export const TheCookbook = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center bg-brown-dark">
-                <embed className="my-6 h-screen w-11/12 lg:w-6/12" src={Kokbok} />
+                <iframe className="my-6 h-screen w-11/12 lg:w-6/12" src={Kokbok} />
             </div>
+
         </>
     );
 };
