@@ -6,7 +6,7 @@ import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { NumberCircleComponent } from "../reusableComponents/numberCircleComponent";
 
 import Letter from "../assets/cookBook/letter.webp"
-
+import Kokbok from "../assets/cookBook/Bakverk.pdf"
 export const TheCookbook = () => {
 
 
@@ -41,26 +41,30 @@ export const TheCookbook = () => {
                         <SubHeadingComponent>ENG</SubHeadingComponent>
                         <ParagraphComponent>Marika,
                             here you get a sign to ignore.
-                            It has, like the real art, its own strong expression.
+                            It has, like real art, its own strong expression.
                             Therefore it's up to the recipient to interpret it, nothing more.
-                            Throw it in your garbage bin.
-
-                            Mum </ParagraphComponent>
+                            Throw it in your trash bin.
+                            Mom
+                        </ParagraphComponent>
                     </div>
 
                     <div>
                         <SubHeadingComponent>DE</SubHeadingComponent>
                         <ParagraphComponent>Marika,
-                            hier bekommst du ein Zeichen, das du ignorieren kannst / zu ignorieren.
+                            hier bekommst du ein Zeichen, das du
+                            zu ignorieren kannst.
                             Es hat, wie die richtigen Künste, seinen eigenen starken Ausdruck gefunden.
                             Also hängt es von dem/der Empfänger*in ab, es zu interpretieren, nichts Weiteres.
                             Wirf es in deine Mülltonne.
                             Mama
                         </ParagraphComponent>
+
                     </div>
                 </div>
             </div>
-
+            <div className="flex flex-col items-center bg-brown-dark">
+                <embed className="my-6 h-screen w-11/12 lg:w-6/12" src={Kokbok} />
+            </div>
         </>
     );
 };
