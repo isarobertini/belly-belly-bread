@@ -1,9 +1,9 @@
 import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
-import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { NumberCircleComponent } from "../reusableComponents/numberCircleComponent";
+
 import BellyPoster from "../assets/home/Belly_poster.webp"
 
 import "../../src/font.css"
@@ -35,7 +35,6 @@ export const Home = () => {
                 <div className="flex flex-col items-center ">
                     <div className="md:w-6/12 justify-center">
                         <ImageComponent src={BellyPoster} />
-                        <ParagraphComponent>this is a paragraph that will describe the project or wathevs</ParagraphComponent>
                     </div>
                 </div>
                 {/* Rolling text */}
