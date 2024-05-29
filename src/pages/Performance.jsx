@@ -6,7 +6,7 @@ import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { SoundComponent } from "../reusableComponents/soundComponent";
 import { RollingText } from "../common/RollingText";
-
+import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import Sketch from "../assets/performance/sketch.webp"
 import placeholderVideo from "../assets/performance/placeholder_video.mp4"
 import Letter from "../assets/cookBook/letter.webp";
@@ -35,9 +35,10 @@ export const Performance = () => {
                     </div>
 
                     <div className="my-12">
-                        <SubHeadingComponent className="text-orange-bright underline decoration-solid">Act 1</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">The Letter</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">Protagonist: Catharina Bauer</SubHeadingComponent>
+
+                        <SubSubHeadingComponent className="underline decoration-solid">Act 1</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">The Letter</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">Protagonist: Catharina Bauer</SubSubHeadingComponent>
 
                         <ParagraphComponent className="">
                             A letter sent from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
@@ -78,9 +79,9 @@ export const Performance = () => {
                     </div>
 
                     <div className="my-12">
-                        <SubHeadingComponent className="text-orange-bright underline decoration-solid">Act 2</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">Diva Poem</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 2</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">Diva Poem</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubSubHeadingComponent>
                         <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1913-1927) by Gertrude Stein</ParagraphComponent>
                     </div>
 
@@ -97,9 +98,9 @@ export const Performance = () => {
                     </div>
 
                     <div className="my-12">
-                        <SubHeadingComponent className="text-orange-bright underline decoration-solid">Act 3</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">3 rooms</SubHeadingComponent>
-                        <SubHeadingComponent className="text-orange-bright">Protagonist: Maria Callas</SubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 3</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">3 rooms</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="text-orange-bright">Protagonist: Maria Callas</SubSubHeadingComponent>
                         <ParagraphComponent>A sketch of the 3 rooms, made by Hedda Bauer.</ParagraphComponent>
                         <ImageComponent src={Sketch} />
                     </div>
