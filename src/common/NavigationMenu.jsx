@@ -17,7 +17,7 @@ export const NavigationMenu = () => {
                     <NavItem to="/" label="Belly Belly Bread" />
                     <NavItem to="/performance" label="Performance" />
                     <NavItem to="/thecookbook" label="The Cookbook" />
-                    <NavItem to="/references" label="References" />
+                    <NavItem to="/installation" label="Installation" />
                     <NavItem to="/collaborations" label="Collaborations" />
                     <NavItem to="/about" label="About" />
                 </ul>
@@ -57,7 +57,7 @@ export const NavigationMenu = () => {
                             <NavItem to="/" label="Belly Belly Bread" />
                             <NavItem to="/performance" label="Performance" />
                             <NavItem to="/thecookbook" label="The Cookbook" />
-                            <NavItem to="/references" label="References" />
+                            <NavItem to="/installation" label="Installation" />
                             <NavItem to="/collaborations" label="Collaborations" />
                             <NavItem to="/about" label="About" />
                         </ul>

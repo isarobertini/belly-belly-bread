@@ -1,14 +1,11 @@
 import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
+import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 
-import BellyPoster from "../assets/home/Belly_poster.webp"
-
-import "../../src/font.css"
-
-export const Home = () => {
+export const Installation = () => {
     return (
         <>
             <div className="bg-pink-light">
@@ -17,27 +14,22 @@ export const Home = () => {
                 <NavigationMenu />
             </div>
 
-            <div className="bg-brown-dark overflow-hidden">
-
-                <div className="flex flex-col items-center ">
+            <div className="bg-brown-dark">
+                <div className="flex flex-col items-center">
                     <div className="md:w-6/12 justify-center">
+                        <HeadingComponent>Installation</HeadingComponent>
 
-                        <HeadingComponent className="">Belly Belly Bread</HeadingComponent>
-
-                        <SubHeadingComponent>Diploma by Hedda Bauer</SubHeadingComponent>
-
+                        <SubHeadingComponent>Installation by Hedda Bauer.</SubHeadingComponent>
+                        <ParagraphComponent>Material: bread, crying table, lines, and much more.</ParagraphComponent>
                     </div>
                 </div>
 
                 <div className="flex flex-col items-center ">
                     <div className="md:w-6/12 justify-center">
-                        <ImageComponent src={BellyPoster} />
+                        <ImageComponent src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
                     </div>
                 </div>
-
-                {/* Rolling text */}
-                <RollingText text="Trigger warning: deals with mental illness" />
-            </div >
+            </div>
         </>
     )
 }

@@ -2,22 +2,20 @@ import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { collaborations } from "../data/CollaborationData";
-import { NumberCircleComponent } from "../reusableComponents/numberCircleComponent";
+import { RollingText } from "../common/RollingText";
 
 export const Collaborations = () => {
     return (
         <>
-            <div>
+            <div className="bg-pink-light">
+                {/* Rolling text */}
+                <RollingText text="Trigger warning: deals with mental illness" />
                 <NavigationMenu />
             </div>
-
             <div className="overflow-hidden h-screen flex flex-col items-center bg-brown-dark">
                 <div className="md:w-6/12 w-full flex flex-col items-center justify-center">
 
                     <HeadingComponent className="text-4xl md:text-5xl">Collaborations</HeadingComponent>
-
-                    {/*page num*/}
-                    <NumberCircleComponent number={5} />
 
                     {/*collabs */}
                     <div className="flex flex-wrap justify-center">
