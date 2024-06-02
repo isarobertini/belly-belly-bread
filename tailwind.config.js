@@ -11,11 +11,14 @@ export default {
       },
       colors: {
         'pink-light': '#FBACE9',
-        'pink-bright': '#FF0BA2',
+        'pink-bright': '#F01A57',
         'yellow-bright': '#FFF443',
         'orange-bright': '#FF7800',
         'brown-dark': '#1a0100',
         'brown-light': '#8D5222',
+        'home-dark': '#E0D9CE',
+        'performance-act-one': '#C1C1C1',
+        'performance-act-two': '#DFE1F0'//this is the old background
       },
     },
   },

@@ -4,7 +4,7 @@ export const collaborations = [
     { name: "Hilma Bäcktröm + Hedda Bauer, Light Design" },
     { name: "Isa Robertini + Hedda Bauer, Web Development + Design" },
     { name: "Julia + Hedda Bauer, Lamp Carpenter" },
-    { name: "Kirill + Hedda Bauer, Sound piece" },
+    { name: "Kirill Tscheluchin + Hedda Bauer, Sound piece" },
     { name: "Ingrid + Hedda Bauer, 16mm video" },
     { name: "Djoana + Hedda Bauer, Crying table" },
     { name: "Julia + Hedda Bauer, Framer" },

@@ -26,13 +26,15 @@ export const TheCookbook = () => {
 
     return (
         <>
-            <div className="bg-brown-dark h-screen">
-                <div className="bg-pink-light">
+            <div className="bg-performance-act-one h-screen">
+                <div className="bg-pink-bright">
                     {/* Rolling text */}
                     <RollingText text="Trigger warning: deals with mental illness" />
                     <NavigationMenu />
                 </div>
-
+                <div className="bg-performance-act-one overflow-hidden">
+                    <RollingText scrollamount="3" text="mmmmm" />
+                </div>
                 <div>
                     <div className="flex flex-col items-center">
                         <div className="md:w-6/12 justify-center">
@@ -40,7 +42,7 @@ export const TheCookbook = () => {
                             <SubHeadingComponent>The cookbook that Catharina Bauer (Hedda Bauer's grandmother) gave to Marika Bauer (Hedda Bauer's mom)</SubHeadingComponent>
                         </div>
                     </div>
-                    <div className="bg-brown-dark flex flex-col items-center">
+                    <div className="bg-performance-act-one flex flex-col items-center">
                         {isMobile ? (
                             <button
                                 className="my-6 p-2 bg-yellow-bright text-pink-bright rounded"

@@ -1,4 +1,3 @@
-// RollingText.js
 import React from 'react';
 
 export const RollingText = ({ text, behavior = "scroll", scrollamount = "5", direction = "left" }) => {
@@ -7,11 +6,10 @@ export const RollingText = ({ text, behavior = "scroll", scrollamount = "5", dir
             behavior={behavior}
             scrollamount={scrollamount}
             direction={direction}
-            className="border-yellow-bright border-2 font-bold bg-orange-bright text-2xl font-oxygen-mono text-yellow-bright"
+            className="border-yellow-bright border-2 bg-orange-bright text-m p-1 font-sans text-yellow-bright m-0 p-0"
         >
             {text}
         </marquee>
     );
 };
-
 

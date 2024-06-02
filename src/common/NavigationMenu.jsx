@@ -1,21 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const NavigationMenu = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const [openSubMenu, setOpenSubMenu] = useState(null);
 
     const handleToggleNav = () => {
         setIsNavOpen((prev) => !prev);
     };
 
+    const handleToggleSubMenu = (label) => {
+        setOpenSubMenu((prev) => (prev === label ? null : label));
+    };
+
     return (
-        <div className={`bg-pink-light h-24 text-brown-dark flex items-center justify-between px-6 top-0 z-20`}>
+        <div className={`font-sans h-24 bg-pink-bright flex items-center justify-between px-6 top-0 z-20`}>
             {/* Navigation */}
             <nav className="flex w-full justify-between lg:justify-center text-2xl">
                 {/* Desktop Menu */}
-                <ul className="desktop-menu hidden space-x-8 lg:flex">
+                <ul className="text-yellow-bright desktop-menu hidden space-x-8 lg:flex">
                     <NavItem to="/" label="Belly Belly Bread" />
-                    <NavItem to="/performance" label="Performance" />
+                    <NavItem
+                        label="Performance"
+                        subItems={[
+                            { to: '/performance', label: 'Performance' },
+                            { to: '/performance/act1', label: 'Act 1' },
+                            { to: '/performance/act2', label: 'Act 2' },
+                            { to: '/performance/act3', label: 'Act 3' },
+                        ]}
+                        openSubMenu={openSubMenu}
+                        handleToggleSubMenu={handleToggleSubMenu}
+                    />
                     <NavItem to="/thecookbook" label="The Cookbook" />
                     <NavItem to="/installation" label="Installation" />
                     <NavItem to="/collaborations" label="Collaborations" />
@@ -53,9 +68,19 @@ export const NavigationMenu = () => {
                         </div>
 
                         {/* Mobile Menu Items */}
-                        <ul className="text-brown-dark flex flex-col items-center justify-between min-h-[250px]">
+                        <ul className="text-orange-bright flex flex-col items-center justify-between min-h-[250px]">
                             <NavItem to="/" label="Belly Belly Bread" />
-                            <NavItem to="/performance" label="Performance" />
+                            <NavItem
+                                label="Performance"
+                                subItems={[
+                                    { to: '/performance', label: 'Performance' },
+                                    { to: '/performance/act1', label: 'Act 1' },
+                                    { to: '/performance/act2', label: 'Act 2' },
+                                    { to: '/performance/act3', label: 'Act 3' },
+                                ]}
+                                openSubMenu={openSubMenu}
+                                handleToggleSubMenu={handleToggleSubMenu}
+                            />
                             <NavItem to="/thecookbook" label="The Cookbook" />
                             <NavItem to="/installation" label="Installation" />
                             <NavItem to="/collaborations" label="Collaborations" />
@@ -83,18 +108,49 @@ export const NavigationMenu = () => {
                     justify-content: space-evenly;
                     align-items: center;
                 }
+                .dropdown {
+                    display: none;
+                    background: #FFF443;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    z-index: 30;
+                }
+                .dropdown-show {
+                    display: block;
+                }
             `}</style>
         </div>
     );
 
-    // Nested NavItem component for navigation links
-    function NavItem({ to, label }) {
-        const location = useLocation(); // This ensures useLocation is called correctly
-        const isCurrentPage = location.pathname === to;
+    function NavItem({ to, label, subItems, openSubMenu, handleToggleSubMenu }) {
+        const location = useLocation();
+        const isCurrentPage = location.pathname === to || (subItems && subItems.some(item => location.pathname === item.to));
+
+        const handleClick = () => {
+            if (subItems) {
+                handleToggleSubMenu(label);
+            }
+        };
 
         return (
-            <li className={`p-8 ${isCurrentPage ? 'underline decoration-4 text-pink-bright' : 'hover:text-pink-bright'} transition-all duration-500`}>
-                <Link to={to}>{label}</Link>
+            <li
+                className={`relative p-8 ${isCurrentPage ? 'underline decoration-4 text-black' : 'hover:text-orange-bright'
+                    } transition-all duration-500 cursor-pointer`}
+            >
+                <div onClick={handleClick}>
+                    {to ? <Link to={to}>{label}</Link> : label}
+                </div>
+                {subItems && (
+                    <ul className={`dropdown ${openSubMenu === label ? 'dropdown-show' : ''}`}>
+                        {subItems.map((subItem) => (
+                            <li key={subItem.to} className={`hover:text-pink-bright ${location.pathname === subItem.to ? 'underline decoration-4 text-black' : ''}`}>
+                                <Link to={subItem.to}>{subItem.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </li>
         );
     }

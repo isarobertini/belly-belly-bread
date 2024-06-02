@@ -7,12 +7,17 @@ import { RollingText } from "../common/RollingText";
 export const Collaborations = () => {
     return (
         <>
-            <div className="bg-pink-light">
+            <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />
                 <NavigationMenu />
             </div>
-            <div className="overflow-hidden h-screen flex flex-col items-center bg-brown-dark">
+
+            <div className="bg-performance-act-one overflow-hidden">
+                <RollingText scrollamount="3" text="it takes a village" />
+            </div>
+
+            <div className="overflow-hidden h-screen flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 w-full flex flex-col items-center justify-center">
 
                     <HeadingComponent className="text-4xl md:text-5xl">Collaborations</HeadingComponent>
