@@ -4,7 +4,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 
-import BellyPoster from "../assets/home/Belly_poster.webp"
+import BellyPoster from "../assets/home/Unbenannt-5.png"
 import belly1 from "../assets/home/belly1.png"
 import belly2 from "../assets/home/belly2.png"
 import bread from "../assets/home/bread.png"

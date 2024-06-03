@@ -28,7 +28,7 @@ export const Collaborations = () => {
                     </div>
 
                     {/*collabs */}
-                    <div className="flex flex-wrap justify-center">
+                    <div className="justify-center">
                         {collaborations.map((collaboration, index) => (
                             <div key={index} className="w-full md:w-auto p-2">
                                 <SubHeadingComponent>{collaboration.name}</SubHeadingComponent>

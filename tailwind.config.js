@@ -8,12 +8,14 @@ export default {
     extend: {
       fontFamily: {
         'oxygen-mono': ['Oxygen Mono', 'monospace'],
+        'lexend': ['Lexend', 'sans-serif'],
+
       },
       colors: {
         'pink-light': '#FBACE9',
-        'pink-bright': '#F01A57',
+        'pink-bright': '#F83FA1',
         'yellow-bright': '#FFF443',
-        'orange-bright': '#FF9D41',
+        'orange-bright': '#FF5500',
         'brown-dark': '#1a0100',
         'brown-light': '#8D5222',
         'home-dark': '#E0D9CE',

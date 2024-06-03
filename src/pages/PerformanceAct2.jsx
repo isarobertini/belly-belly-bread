@@ -57,69 +57,57 @@ export const PerformanceAct2 = () => {
                         <SubHeadingComponent>The Diva Poem</SubHeadingComponent>
                         <SubHeadingComponent>By Hedda Bauer</SubHeadingComponent>
 
-                        <ParagraphComponent>The diva sleeping<br />
-                            The diva breathing<br />
-                            The diva scattering<br />
-                            The diva dripping<br />
-                            The diva numbing<br />
-                            The diva soothing<br />
-                            The diva trembling<br />
-                            The diva strong<br />
-                            The diva thong<br />
-                            My diva cooking<br />
-                            <br />
-                            The diva sensuous<br />
-                            The diva rhythm<br />
-                            The diva's cycles<br />
-                            <br />
-                            The diva funny<br />
-                            The diva bunny<br />
-                            <br />
-                            The diva hands<br />
-                            The diva mouth<br />
-                            The diva head<br />
-                            The diva chest<br />
-                            <br />
-                            The diva size<br />
-                            The diva thighs<br />
-                            <br />
-                            The diva sick<br />
-                            The diva kick<br />
-                            <br />
-                            The diva bread<br />
-                            The diva belly<br />
-                            The diva head<br />
-                            <br />
-                            The diva cow<br />
-                            The diva now<br />
-                            <br />
-                            The diva back<br />
-                            The diva rack<br />
-                            The diva attack<br />
-                            <br />
-                            The diva ground<br />
-                            The diva dips<br />
-                            The diva flames<br />
-                            The diva clouds<br />
-                            <br />
-                            The diva smack<br />
-                            The diva track<br />
-                            <br />
-                            The diva crew<br />
-                            The diva moo<br />
-                            <br />
-                            The more<br />
-                            The soar<br />
-                            Diva here take it all<br />
-                            <br />
-                            Diva me diva you, diva<br />
-                            <br />
-                            Diva destiny<br />
-                            Diva exit<br />
-                            Diva mort<br />
-                            Diva is that your sort?<br />
-                            The Diva is splendid
+                        <ParagraphComponent>
+                            The diva sleeping
+                            The diva breathing
+                            The diva scattering
+                            The diva dripping
+                            The diva numbing
+                            The diva soothing
+                            The diva trembling
+                            The diva strong
+                            The diva thong
+                            My diva cooking
+
+                            The diva sensuous
+                            The diva rhythm
+                            The diva's cycles
+
+                            The diva funny
+                            And the diva bunny
+
+                            The diva hands
+                            The diva mouth
+                            The diva head
+                            The diva chest
+
+                            The diva size
+                            The diva thighs
+
+                            The diva sick
+                            And the diva kicks
+
+                            The diva bread
+                            The diva belly
+                            The diva head
+
+                            The diva cow
+                            The diva now
+
+                            The diva back
+                            The diva rack
+                            The diva attack
+
+                            The diva ground
+                            The diva dips
+
+                            The diva smack
+                            The diva track
+
+                            The diva crew
+                            The diva moo
                         </ParagraphComponent>
+
                     </div>
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">

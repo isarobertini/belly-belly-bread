@@ -48,14 +48,14 @@ export const PerformanceAct1 = () => {
                         <SubSubHeadingComponent className="text-orange-bright">Protagonist: Catharina Bauer</SubSubHeadingComponent>
 
                         <ParagraphComponent className="">
-                            A letter sent from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
+                            A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
                         </ParagraphComponent>
                         <ImageComponent src={Letter} />
 
                         <div>
                             <SubHeadingComponent>SWE</SubHeadingComponent>
                             <ParagraphComponent>
-                                Marika, här får Du ett tecken till att ignorera.<br />
+                                Marika,<br /> här får Du ett tecken till att ignorera.<br />
                                 Den har, liksom den riktiga konsten, sitt eget starka uttryck. <br />
                                 Alltså beror det på mottagaren att uttolka det, inget mer. <br />
                                 Släng den i Din soptunna.
@@ -66,10 +66,10 @@ export const PerformanceAct1 = () => {
                         <div>
                             <SubHeadingComponent>ENG</SubHeadingComponent>
                             <ParagraphComponent>
-                                Marika, here you get a sign to ignore. <br />
+                                Marika,<br /> here you get a sign to ignore. <br />
                                 It has, like real art, its own strong expression. <br />
                                 Therefore it's up to the recipient to interpret it, nothing more. <br />
-                                Throw it in your trash bin.
+                                Throw it in your garbish bin.
                             </ParagraphComponent>
                             <ParagraphComponent>Mom</ParagraphComponent>
                         </div>
@@ -77,7 +77,7 @@ export const PerformanceAct1 = () => {
                         <div>
                             <SubHeadingComponent>DE</SubHeadingComponent>
                             <ParagraphComponent>
-                                Marika, hier bekommst du ein Zeichen, das du zu ignorieren kannst. <br />
+                                Marika, <br />hier bekommst du ein Zeichen, das du ignorieren kannst. <br />
                                 Es hat, wie die richtigen Künste, seinen eigenen starken Ausdruck gefunden. <br />
                                 Also hängt es von dem/der Empfänger*in ab, es zu interpretieren, nichts Weiteres.<br />
                                 Wirf es in deine Mülltonne.
