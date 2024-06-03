@@ -1,14 +1,28 @@
+import { useEffect } from "react";
+
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { RollingText } from "../common/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
+import { ButtonComponent } from "../reusableComponents/buttonComponent";
+import { useLocation } from 'react-router-dom';
 
+import ActHeading from "../assets/performance/ActHeading.png";
+import oneHeading from "../assets/performance/oneHeading.png";
+import twoHeading from "../assets/performance/twoHeading.png";
+import threeHeading from "../assets/performance/threeHeading.png";
 import Letter from "../assets/cookBook/letter.webp";
 
 export const PerformanceAct1 = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const location = useLocation();
+
     return (
         <>
             <div className="bg-pink-bright">
@@ -18,20 +32,14 @@ export const PerformanceAct1 = () => {
             </div>
 
             <div className="bg-performance-act-one overflow-hidden">
-                <RollingText scrollamount="3" text="Act like 1!" />
+                <RollingText scrollamount="3" text="Act like it" />
             </div>
 
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
-                    <HeadingComponent>Performance</HeadingComponent>
-
-                    <div className="my-6">
-                        <SubHeadingComponent>Performance: 16, 23, 30th of june, 14h</SubHeadingComponent>
-                        <SubHeadingComponent>Kurzbaugergasse 9, 1020 Wien</SubHeadingComponent>
-                    </div>
-
-                    <div className="my-6">
-                        <SubHeadingComponent>Operette in 3 acts</SubHeadingComponent>
+                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                        <ImageComponent className="w-52 md:w-96" src={ActHeading} />
+                        <ImageComponent className="w-52 md:w-60" src={oneHeading} />
                     </div>
 
                     <div className="my-12">
@@ -43,37 +51,49 @@ export const PerformanceAct1 = () => {
                             A letter sent from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
                         </ParagraphComponent>
                         <ImageComponent src={Letter} />
+
                         <div>
                             <SubHeadingComponent>SWE</SubHeadingComponent>
                             <ParagraphComponent>
-                                Marika, här får Du ett tecken till att ignorera.<br /> Den har, liksom den riktiga konsten, sitt eget starka uttryck. <br />
+                                Marika, här får Du ett tecken till att ignorera.<br />
+                                Den har, liksom den riktiga konsten, sitt eget starka uttryck. <br />
                                 Alltså beror det på mottagaren att uttolka det, inget mer. <br />
                                 Släng den i Din soptunna.
                             </ParagraphComponent>
-                            <ParagraphComponent>
-                                Mamma</ParagraphComponent>
-
+                            <ParagraphComponent>Mamma</ParagraphComponent>
                         </div>
+
                         <div>
                             <SubHeadingComponent>ENG</SubHeadingComponent>
                             <ParagraphComponent>
                                 Marika, here you get a sign to ignore. <br />
                                 It has, like real art, its own strong expression. <br />
                                 Therefore it's up to the recipient to interpret it, nothing more. <br />
-                                Throw it in your trash bin.<br /></ParagraphComponent>
-                            <ParagraphComponent>  Mom
+                                Throw it in your trash bin.
                             </ParagraphComponent>
+                            <ParagraphComponent>Mom</ParagraphComponent>
                         </div>
+
                         <div>
                             <SubHeadingComponent>DE</SubHeadingComponent>
                             <ParagraphComponent>
                                 Marika, hier bekommst du ein Zeichen, das du zu ignorieren kannst. <br />
                                 Es hat, wie die richtigen Künste, seinen eigenen starken Ausdruck gefunden. <br />
                                 Also hängt es von dem/der Empfänger*in ab, es zu interpretieren, nichts Weiteres.<br />
-                                Wirf es in deine Mülltonne. <br />
+                                Wirf es in deine Mülltonne.
                             </ParagraphComponent>
-                            <ParagraphComponent> Mama</ParagraphComponent>
+                            <ParagraphComponent>Mama</ParagraphComponent>
+                        </div>
 
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
+                            <div className="border-2 border-black p-4 m-4 bg-orange-bright">
+                                <ImageComponent className="h-48" src={twoHeading} />
+                                <ButtonComponent to="/performance/act2" label="Go to Act 2" />
+                            </div>
+                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
+                                <ImageComponent className="w-28 h-48" src={threeHeading} />
+                                <ButtonComponent to="/performance/act3" label="Go to Act 3" />
+                            </div>
                         </div>
                     </div>
                 </div>

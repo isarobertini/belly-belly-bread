@@ -13,7 +13,7 @@ export default {
         'pink-light': '#FBACE9',
         'pink-bright': '#F01A57',
         'yellow-bright': '#FFF443',
-        'orange-bright': '#FF7800',
+        'orange-bright': '#FF9D41',
         'brown-dark': '#1a0100',
         'brown-light': '#8D5222',
         'home-dark': '#E0D9CE',

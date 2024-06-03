@@ -1,8 +1,10 @@
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { collaborations } from "../data/CollaborationData";
 import { RollingText } from "../common/RollingText";
+import { ImageComponent } from "../reusableComponents/imageComponent";
+
+import collaborationHeading from "../assets/collabs/collaborationHeading.png"
 
 export const Collaborations = () => {
     return (
@@ -20,7 +22,10 @@ export const Collaborations = () => {
             <div className="overflow-hidden h-screen flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 w-full flex flex-col items-center justify-center">
 
-                    <HeadingComponent className="text-4xl md:text-5xl">Collaborations</HeadingComponent>
+                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                        <ImageComponent className="h-96" src={collaborationHeading} />
+
+                    </div>
 
                     {/*collabs */}
                     <div className="flex flex-wrap justify-center">

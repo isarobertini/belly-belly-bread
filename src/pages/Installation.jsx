@@ -5,6 +5,7 @@ import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 
+import installationHeading from "../assets/installation/installationHeading.png"
 export const Installation = () => {
     return (
         <>
@@ -14,13 +15,16 @@ export const Installation = () => {
                 <NavigationMenu />
             </div>
             <div className="bg-performance-act-one overflow-hidden">
-                <RollingText scrollamount="3" text="hello there!" />
+                <RollingText scrollamount="3" text="cry like the crying bread table" />
             </div>
 
             <div className="bg-performance-act-one">
                 <div className="flex flex-col items-center">
                     <div className="md:w-6/12 justify-center">
-                        <HeadingComponent>Installation</HeadingComponent>
+
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                            <ImageComponent className="h-96" src={installationHeading} />
+                        </div>
 
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
                         <ParagraphComponent><ParagraphComponent>

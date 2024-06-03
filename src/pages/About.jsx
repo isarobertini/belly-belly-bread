@@ -3,8 +3,8 @@ import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 
+import aboutHeading from "../assets/about/aboutHeading.png"
 import AboutBellyBread from "../assets/about/about.webp"
-import performanceInstructions from "../assets/performance/performance_instructions.webp"
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 
@@ -23,7 +23,11 @@ export const About = () => {
 
             <div className="h-auto flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
-                    <HeadingComponent>About</HeadingComponent>
+
+                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                        <ImageComponent className="h-96" src={aboutHeading} />
+
+                    </div>
 
 
                     <ImageComponent src={AboutBellyBread} />

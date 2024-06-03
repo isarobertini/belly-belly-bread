@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { RollingText } from "../common/RollingText";
+import { ImageComponent } from '../reusableComponents/imageComponent';
+
+import cookBookHeading from "../assets/cookBook/cookBookHeading.png"
 import Kokbok from "../assets/cookBook/Bakverk.pdf";
 
 export const TheCookbook = () => {
@@ -38,7 +40,10 @@ export const TheCookbook = () => {
                 <div>
                     <div className="flex flex-col items-center">
                         <div className="md:w-6/12 justify-center">
-                            <HeadingComponent>The Cookbook</HeadingComponent>
+
+                            <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                                <ImageComponent className="h-96" src={cookBookHeading} />
+                            </div>
                             <SubHeadingComponent>The cookbook that Catharina Bauer (Hedda Bauer's grandmother) gave to Marika Bauer (Hedda Bauer's mom)</SubHeadingComponent>
                         </div>
                     </div>

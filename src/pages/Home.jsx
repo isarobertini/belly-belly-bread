@@ -19,7 +19,7 @@ export const Home = () => {
                 <NavigationMenu />
             </div>
             <div className="bg-performance-act-one overflow-hidden">
-                <RollingText scrollamount="3" text="crunchy crunchy maybe add some butter?" />
+                <RollingText scrollamount="3" text="crunchy crunchy maybe add some butter" />
 
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">
