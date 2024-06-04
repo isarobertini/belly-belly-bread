@@ -42,10 +42,11 @@ export const PerformanceAct1 = () => {
                         <ImageComponent className="w-52 md:w-60" src={oneHeading} />
                     </div>
 
+
                     <div className="my-12">
-                        <SubSubHeadingComponent className="underline decoration-solid">Act 1</SubSubHeadingComponent>
-                        <SubSubHeadingComponent className="text-orange-bright">The Letter</SubSubHeadingComponent>
-                        <SubSubHeadingComponent className="text-orange-bright">Protagonist: Catharina Bauer</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="underline decoration-solid ">Act 1</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="">The Letter</SubSubHeadingComponent>
+                        <SubSubHeadingComponent className="">Protagonist: Catharina Bauer</SubSubHeadingComponent>
 
                         <ParagraphComponent className="">
                             A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
@@ -54,35 +55,39 @@ export const PerformanceAct1 = () => {
 
                         <div>
                             <SubHeadingComponent>SWE</SubHeadingComponent>
-                            <ParagraphComponent>
-                                Marika,<br /> här får Du ett tecken till att ignorera.<br />
+                            <ParagraphComponent className="indent-8">
+                                Marika, </ParagraphComponent>
+                            <ParagraphComponent className="indent-11">
+                                här får Du ett tecken till att ignorera.<br />
                                 Den har, liksom den riktiga konsten, sitt eget starka uttryck. <br />
                                 Alltså beror det på mottagaren att uttolka det, inget mer. <br />
                                 Släng den i Din soptunna.
                             </ParagraphComponent>
-                            <ParagraphComponent>Mamma</ParagraphComponent>
+                            <ParagraphComponent className="indent-60">Mamma</ParagraphComponent>
                         </div>
 
                         <div>
                             <SubHeadingComponent>ENG</SubHeadingComponent>
-                            <ParagraphComponent>
-                                Marika,<br /> here you get a sign to ignore. <br />
+
+                            <ParagraphComponent className="indent-8">
+                                Marika,</ParagraphComponent>
+                            <ParagraphComponent className="indent-11">here you get a sign to ignore. <br />
                                 It has, like real art, its own strong expression. <br />
                                 Therefore it's up to the recipient to interpret it, nothing more. <br />
                                 Throw it in your garbish bin.
                             </ParagraphComponent>
-                            <ParagraphComponent>Mom</ParagraphComponent>
+                            <ParagraphComponent className="indent-60">Mom</ParagraphComponent>
                         </div>
 
                         <div>
                             <SubHeadingComponent>DE</SubHeadingComponent>
-                            <ParagraphComponent>
-                                Marika, <br />hier bekommst du ein Zeichen, das du ignorieren kannst. <br />
+                            <ParagraphComponent className="indent-8">
+                                Marika, </ParagraphComponent><ParagraphComponent className="indent-11">hier bekommst du ein Zeichen, das du ignorieren kannst. <br />
                                 Es hat, wie die richtigen Künste, seinen eigenen starken Ausdruck gefunden. <br />
                                 Also hängt es von dem/der Empfänger*in ab, es zu interpretieren, nichts Weiteres.<br />
                                 Wirf es in deine Mülltonne.
                             </ParagraphComponent>
-                            <ParagraphComponent>Mama</ParagraphComponent>
+                            <ParagraphComponent className="indent-60">Mama</ParagraphComponent>
                         </div>
 
                         <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">

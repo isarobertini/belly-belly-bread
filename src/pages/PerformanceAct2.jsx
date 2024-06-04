@@ -13,7 +13,7 @@ import ActHeading from "../assets/performance/ActHeading.png";
 import twoHeading from "../assets/performance/twoHeading.png";
 import oneHeading from "../assets/performance/oneHeading.png";
 import threeHeading from "../assets/performance/threeHeading.png";
-import SoundPlaceholder from "../assets/performance/placeholder_sound.wav";
+import SoundLiftingBelly from "../assets/performance/SoundLiftingBelly.m4a";
 
 export const PerformanceAct2 = () => {
 
@@ -30,7 +30,7 @@ export const PerformanceAct2 = () => {
             </div>
 
             <div className="bg-performance-act-one overflow-hidden">
-                <RollingText scrollamount="3" text="Act like 2!" />
+                <RollingText scrollamount="3" text="Act like it or not" />
             </div>
 
             <div className="flex flex-col items-center bg-performance-act-one">
@@ -45,12 +45,13 @@ export const PerformanceAct2 = () => {
                         <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 2</SubSubHeadingComponent>
                         <SubSubHeadingComponent className="text-orange-bright">Diva Poem</SubSubHeadingComponent>
                         <SubSubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubSubHeadingComponent>
+
                         <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1913-1927) by Gertrude Stein</ParagraphComponent>
                     </div>
 
                     <div className="flex flex-col items-center">
-                        <SubHeadingComponent>Sound: Lifting Belly</SubHeadingComponent>
-                        <SoundComponent src={SoundPlaceholder} />
+                        <SubHeadingComponent>Sound:</SubHeadingComponent>
+                        <SoundComponent src={SoundLiftingBelly} />
                     </div>
 
                     <div className="my-12 flex flex-col items-center">

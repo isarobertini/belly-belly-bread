@@ -22,7 +22,7 @@ export const Home = () => {
                 <RollingText scrollamount="3" text="crunchy crunchy maybe add some butter" />
 
                 <div className="flex flex-col items-center">
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                    <div className="flex flex-col md:flex-row w-full justify-center items-center ">
                         <ImageComponent className="w-full md:w-1/3" src={belly1} />
                         <ImageComponent className="w-full md:w-1/3" src={belly2} />
                         <ImageComponent className="w-full md:w-1/3" src={bread} />

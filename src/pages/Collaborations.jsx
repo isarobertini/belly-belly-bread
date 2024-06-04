@@ -19,7 +19,7 @@ export const Collaborations = () => {
                 <RollingText scrollamount="3" text="it takes a village" />
             </div>
 
-            <div className="overflow-hidden h-screen flex flex-col items-center bg-performance-act-one">
+            <div className="overflow-hidden h-auto flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 w-full flex flex-col items-center justify-center">
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">

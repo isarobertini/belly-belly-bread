@@ -28,7 +28,7 @@ export const Performance = () => {
             </div>
 
             <div className="bg-performance-act-one">
-                <RollingText scrollamount="3" text="perform! perform!" />
+                <RollingText scrollamount="3" text="prrrrrrr prrrrrrrr prrrrrrrrrrrrrrrrr" />
             </div>
 
             <div className="flex flex-col items-center bg-performance-act-one">
@@ -39,11 +39,9 @@ export const Performance = () => {
                     <div className="my-6">
                         <SubHeadingComponent>Performance: 16, 23, 30th of June, 14h</SubHeadingComponent>
                         <SubHeadingComponent>Kurzbaugergasse 9, 1020 Wien</SubHeadingComponent>
-                    </div>
-
-                    <div className="my-6">
                         <SubHeadingComponent>Operette in 3 acts</SubHeadingComponent>
                     </div>
+
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
                         {showAct1 && (
@@ -67,7 +65,7 @@ export const Performance = () => {
                     </div>
 
                 </div>
-            </div>
+            </div >
 
         </>
     )

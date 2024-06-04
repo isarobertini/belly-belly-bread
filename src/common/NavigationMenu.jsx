@@ -14,7 +14,7 @@ export const NavigationMenu = () => {
     };
 
     return (
-        <div className={`font-sans h-24 bg-pink-bright flex items-center justify-between px-6 top-0 z-20`}>
+        <div className={`ffont-lexend tracking-tighter h-24 bg-pink-bright flex items-center justify-between px-6 top-0 z-20`}>
             {/* Navigation */}
             <nav className="flex w-full justify-between lg:justify-center text-2xl">
                 {/* Desktop Menu */}
@@ -112,7 +112,6 @@ export const NavigationMenu = () => {
                     display: none;
                     background: #FFF443;
                     padding: 0.5rem 1rem;
-                    border-radius: 0.5rem;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     position: absolute;
                     z-index: 30;
@@ -136,7 +135,7 @@ export const NavigationMenu = () => {
 
         return (
             <li
-                className={`relative p-8 ${isCurrentPage ? 'underline decoration-4 text-black' : 'hover:text-orange-bright'
+                className={`relative p-8 ${isCurrentPage ? 'underline decoration-4 text-performance-act-one' : 'hover:text-performance-act-one'
                     } transition-all duration-500 cursor-pointer`}
             >
                 <div onClick={handleClick}>
@@ -145,7 +144,7 @@ export const NavigationMenu = () => {
                 {subItems && (
                     <ul className={`dropdown ${openSubMenu === label ? 'dropdown-show' : ''}`}>
                         {subItems.map((subItem) => (
-                            <li key={subItem.to} className={`hover:text-pink-bright ${location.pathname === subItem.to ? 'underline decoration-4 text-black' : ''}`}>
+                            <li key={subItem.to} className={`hover:text-pink-bright ${location.pathname === subItem.to ? 'underline decoration-4 text-performance-act-one' : ''}`}>
                                 <Link to={subItem.to}>{subItem.label}</Link>
                             </li>
                         ))}
