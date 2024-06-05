@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Fade } from "react-awesome-reveal";
+
+import { BrowserRouter, Routes } from 'react-router-dom';
 import routes from './routes/routes';
-import { Fade } from 'react-awesome-reveal';
 
 import './App.css'
 

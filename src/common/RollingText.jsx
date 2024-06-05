@@ -1,7 +1,7 @@
-import React from 'react';
 
 export const RollingText = ({ text, behavior = "scroll", scrollamount = "5", direction = "left" }) => {
     return (
+
         <marquee
             behavior={behavior}
             scrollamount={scrollamount}

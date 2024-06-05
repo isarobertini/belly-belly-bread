@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -37,10 +38,12 @@ export const PerformanceAct2 = () => {
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
 
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
-                        <ImageComponent className="w-52 md:w-60" src={twoHeading} disableModal />
-                    </div>
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                            <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
+                            <ImageComponent className="w-52 md:w-60" src={twoHeading} disableModal />
+                        </div>
+                    </Fade>
 
                     <div className="my-12">
                         <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 2</SubSubHeadingComponent>
@@ -112,17 +115,18 @@ export const PerformanceAct2 = () => {
 
                     </div>
 
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                        <div className="border-2 border-black p-4 m-4 bg-pink-light">
-                            <ImageComponent className="h-48" src={oneHeading} />
-                            <ButtonComponent to="/performance/act1" label="Go to Act 1" />
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
+                            <div className="border-2 border-black p-4 m-4 bg-pink-light">
+                                <ImageComponent className="h-48" src={oneHeading} />
+                                <ButtonComponent to="/performance/act1" label="Go to Act 1" />
+                            </div>
+                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
+                                <ImageComponent className="w-28 h-48" src={threeHeading} />
+                                <ButtonComponent to="/performance/act3" label="Go to Act 3" />
+                            </div>
                         </div>
-                        <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
-                            <ImageComponent className="w-28 h-48" src={threeHeading} />
-                            <ButtonComponent to="/performance/act3" label="Go to Act 3" />
-                        </div>
-                    </div>
-
+                    </Fade>
                 </div>
             </div>
             <Footer />

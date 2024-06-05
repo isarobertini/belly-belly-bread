@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 import { NavigationMenu } from "../common/NavigationMenu";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
@@ -24,21 +26,25 @@ export const About = () => {
             <div className="h-auto flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
 
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="md:h-96" src={aboutHeading} disableModal />
-
-                    </div>
-
-                    <ImageComponent src={AboutBellyBread} />
-
-                    <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
-                        <div>
-                            <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                            <ImageComponent className="h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                            <ImageComponent className="md:h-96" src={aboutHeading} disableModal />
                         </div>
+                    </Fade>
 
-                    </div>
+                    <Fade>
+                        <ImageComponent src={AboutBellyBread} />
+                    </Fade>
 
+                    <Fade>
+                        <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
+                            <div>
+                                <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
+                                <ImageComponent className="h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
+                            </div>
+
+                        </div>
+                    </Fade>
 
                     <div className="">
                         <div>
@@ -56,9 +62,11 @@ export const About = () => {
                                 "The Bread of Life" is not just an installation; it is an immersive experience that celebrates the profound, everyday artistry of bread. Through this installation, Bauer elevates bread from mere sustenance to a metaphor for life's richness and interconnectedness, urging us to appreciate the beauty in the ordinary.</ParagraphComponent>
                             <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
                         </div>
-                        <div>
-                            <ImageComponent className="h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
-                        </div>
+                        <Fade>
+                            <div>
+                                <ImageComponent className="h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
+                            </div>
+                        </Fade>
                     </div>
 
 

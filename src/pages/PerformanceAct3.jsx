@@ -1,8 +1,7 @@
 import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
-import { VideoComponent } from "../reusableComponents/videoComponent";
-import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { RollingText } from "../common/RollingText";
@@ -37,10 +36,12 @@ export const PerformanceAct3 = () => {
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
 
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
-                        <ImageComponent className="w-52 md:w-60" src={threeHeading} disableModal />
-                    </div>
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                            <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
+                            <ImageComponent className="w-52 md:w-60" src={threeHeading} disableModal />
+                        </div>
+                    </Fade>
 
                     <div className="">
                         <div className="my-12">
@@ -48,22 +49,25 @@ export const PerformanceAct3 = () => {
                             <SubSubHeadingComponent className="text-orange-bright">3 rooms</SubSubHeadingComponent>
                             <SubSubHeadingComponent className="text-orange-bright">Protagonist: Maria Callas</SubSubHeadingComponent>
                             <ParagraphComponent>A sketch of the 3 rooms, made by Hedda Bauer.</ParagraphComponent>
-                            <ImageComponent src={Sketch} />
+
+                            <Fade>
+                                <ImageComponent src={Sketch} />
+                            </Fade>
                         </div>
                     </div>
 
-
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                        <div className="border-2 border-black p-4 m-4 bg-pink-light">
-                            <ImageComponent className="h-48" src={oneHeading} />
-                            <ButtonComponent to="/performance/act1" label="Go to Act 1" />
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
+                            <div className="border-2 border-black p-4 m-4 bg-pink-light">
+                                <ImageComponent className="h-48" src={oneHeading} />
+                                <ButtonComponent to="/performance/act1" label="Go to Act 1" />
+                            </div>
+                            <div className="border-2 border-black p-4 m-4 bg-orange-bright">
+                                <ImageComponent className="h-48" src={twoHeading} />
+                                <ButtonComponent to="/performance/act2" label="Go to Act 2" />
+                            </div>
                         </div>
-                        <div className="border-2 border-black p-4 m-4 bg-orange-bright">
-                            <ImageComponent className="h-48" src={twoHeading} />
-                            <ButtonComponent to="/performance/act2" label="Go to Act 2" />
-                        </div>
-                    </div>
-
+                    </Fade>
                 </div>
             </div>
             <Footer />

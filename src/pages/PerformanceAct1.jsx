@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -38,11 +39,13 @@ export const PerformanceAct1 = () => {
 
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
-                    <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
-                        <ImageComponent className="w-52 md:w-60" src={oneHeading} disableModal />
-                    </div>
 
+                    <Fade>
+                        <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                            <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
+                            <ImageComponent className="w-52 md:w-60" src={oneHeading} disableModal />
+                        </div>
+                    </Fade>
 
                     <div className="my-12">
                         <SubSubHeadingComponent className="underline decoration-solid ">Act 1</SubSubHeadingComponent>
@@ -52,8 +55,10 @@ export const PerformanceAct1 = () => {
                         <ParagraphComponent className="">
                             A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
                         </ParagraphComponent>
-                        <ImageComponent src={Letter} />
 
+                        <Fade>
+                            <ImageComponent src={Letter} />
+                        </Fade>
                         <div>
                             <SubHeadingComponent>SWE</SubHeadingComponent>
                             <ParagraphComponent className="indent-8">
