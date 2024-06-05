@@ -36,23 +36,28 @@ export const About = () => {
                         <ImageComponent src={AboutBellyBread} />
                     </Fade>
 
-                    <Fade>
-                        <div className="justify-center flex md:flex-row md:space-x-6">
-                            <div>
-                                <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                                <ImageComponent className="lg:h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
-                            </div>
 
-                            <div>
-                                <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
-                                <ImageComponent className="lg:h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
-                            </div>
+                    <div className="flex flex-col items-center bg-performance-act-one">
+
+                        <div>
+
+                            <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
+                            <ImageComponent className="lg:h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
+
                         </div>
-                    </Fade>
 
-                    <Fade>
 
-                    </Fade>
+
+                        <div>
+
+                            <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
+                            <ImageComponent className="lg:h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
+
+                        </div>
+                    </div>
+
+
+
                     <div className="flex justify-center">
                         <div>
                             <SubHeadingComponent>Text by Mark reflecting on Hedda Bauers art work</SubHeadingComponent>
@@ -90,9 +95,9 @@ export const About = () => {
 
             </div >
             {/* Rolling text */}
-            <div className="bg-performance-act-one">
+            < div className="bg-performance-act-one" >
                 <RollingText text="Trigger warning: deals with mental illness" />
-            </div>
+            </div >
             <Footer />
         </>
     )

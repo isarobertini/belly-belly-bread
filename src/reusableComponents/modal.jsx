@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const Modal = ({ isOpen, onClose, children }) => {
+    useEffect(() => {
+        if (isOpen) {
+            // Add overflow-hidden to body when modal is open
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // Remove overflow-hidden from body when modal is closed
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Cleanup: Remove event listener when component unmounts
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
 
     return (
