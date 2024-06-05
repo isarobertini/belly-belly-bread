@@ -1,24 +1,12 @@
-import React, { useState } from 'react';
-import { ButtonComponent } from './buttonComponent';
-import { ParagraphComponent } from './paragraphComponent';
+import React from 'react';
 
 export const VideoComponent = ({ src, controls = true, autoPlay = false, className, poster, ...props }) => {
-    const [isPopupVisible, setIsPopupVisible] = useState(false);
-
     // Combine the default Tailwind class with any additional classes provided
     const defaultClasses = "p-6";
     const classes = className ? `${defaultClasses} ${className}` : defaultClasses;
 
-    const handleOverlayClick = () => {
-        setIsPopupVisible(true);
-    };
-
-    const handleClosePopup = () => {
-        setIsPopupVisible(false);
-    };
-
     return (
-        <div className="relative">
+        <div className="relative group">
             <video
                 src={src}
                 controls={false} // Disable default controls
@@ -29,25 +17,13 @@ export const VideoComponent = ({ src, controls = true, autoPlay = false, classNa
             />
             <div
                 className="absolute inset-0 flex items-center justify-center bg-transparent cursor-pointer"
-                onClick={handleOverlayClick}
             >
                 {/* Overlay Content */}
-                <div className="bg-pink-bright text-yellow-bright bg-opacity-70 hover:bg-orange-bright p-2 transition duration-200 ease-in-out">
-                    Click to play
+                <div className="hover:bg-orange-bright p-2 transition duration-200 ease-in-out">
+                    <img className="opacity-80" width="100" height="100" src="https://img.icons8.com/ios-filled/50/play--v1.png" alt="play--v1" />
                 </div>
             </div>
-            {isPopupVisible && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                    <div className="bg-performance-act-one p-4 shadow-lg text-center">
-                        <ParagraphComponent>The video is currently developing in Belgium.</ParagraphComponent>
-                        <ButtonComponent
-                            to="#"
-                            label="Close"
-                            onClick={handleClosePopup}
-                        />
-                    </div>
-                </div>
-            )}
+
         </div>
     );
 };
