@@ -45,20 +45,21 @@ export const Performance = () => {
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
                         {showAct1 && (
-                            <div className="border-2 border-black p-4 m-4 bg-pink-light">
-                                <ImageComponent className="h-48" src={oneHeading} />
+                            <div className="border-2 border-black p-4 m-4 bg-pink-light hover:transform hover:scale-105 transition duration-300 ease-in-out">
+                                <ImageComponent className="h-48" src={oneHeading} disableModal />
                                 <ButtonComponent to="/performance/act1" label="Go to Act 1" />
                             </div>
+
                         )}
                         {showAct2 && (
-                            <div className="border-2 border-black p-4 m-4 bg-orange-bright">
-                                <ImageComponent className="h-48" src={twoHeading} />
+                            <div className="border-2 border-black p-4 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
+                                <ImageComponent className="h-48" src={twoHeading} disableModal />
                                 <ButtonComponent to="/performance/act2" label="Go to Act 2" />
                             </div>
                         )}
                         {showAct3 && (
-                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
-                                <ImageComponent className="w-28 h-48" src={threeHeading} />
+                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
+                                <ImageComponent className="w-28 h-48" src={threeHeading} disableModal />
                                 <ButtonComponent to="/performance/act3" label="Go to Act 3" />
                             </div>
                         )}

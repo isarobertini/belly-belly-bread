@@ -3,6 +3,7 @@ import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
+import { Footer } from "../reusableComponents/footer";
 
 import aboutHeading from "../assets/about/aboutHeading.png"
 import AboutBellyBread from "../assets/about/about.webp"
@@ -43,12 +44,12 @@ export const About = () => {
 
                     <SubHeadingComponent>Contact</SubHeadingComponent>
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                        <div className="bg-yellow-bright border-2 border-black m-2 p-2">
+                        <div className="bg-yellow-bright border-2 border-black m-2 p-2 hover:transform hover:scale-105 transition duration-300 ease-in-out">
                             <a href="https://www.heddabauer.com/" target="_blank" rel="noopener noreferrer" className="text-pink-bright underline p-2">
                                 https://www.heddabauer.com/
                             </a>
                         </div>
-                        <div className="bg-yellow-bright border-2 border-black m-2 p-2">
+                        <div className="bg-yellow-bright border-2 border-black m-2 p-2 hover:transform hover:scale-105 transition duration-300 ease-in-out">
                             <a href="mailto:heddabauer@gmail.com" className="text-pink-bright underline">
                                 heddabauer@gmail.com
                             </a>
@@ -56,9 +57,10 @@ export const About = () => {
                     </div>
 
                 </div>
-
-
+                {/* Rolling text */}
+                <RollingText text="Trigger warning: deals with mental illness" />
             </div>
+            <Footer />
         </>
     )
 }

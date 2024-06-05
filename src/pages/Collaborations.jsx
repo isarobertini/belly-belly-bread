@@ -6,6 +6,7 @@ import { Kurzbaugergasse } from "../data/CollaborationData";
 import { RollingText } from "../common/RollingText";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
+import { Footer } from "../reusableComponents/footer";
 
 import collaborationHeading from "../assets/collabs/collaborationHeading.png"
 
@@ -62,11 +63,11 @@ export const Collaborations = () => {
 
                     </div>
                 </div>
+                {/* Rolling text */}
+                <RollingText text="Trigger warning: deals with mental illness" />
             </div>
-            <footer className="text-center py-4 bg-gray-200">
-                <p className="text-gray-600 text-sm">&copy; 2024 Hedda Bauer. All Rights Reserved.</p>
-            </footer>
 
+            <Footer />
         </>
     );
 }

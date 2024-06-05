@@ -77,15 +77,39 @@ export const Installation = () => {
                             -can you tell me what a Lagato is? I ask <br />
                         </ParagraphComponent>
                     </div>
+
                     <div className="my-6 flex flex-col items-center">
-                        <div className="justify-center mb-12">
-                            <SubHeadingComponent>16mm video</SubHeadingComponent>
-                            <VideoComponent className="w-96" src={placeholderVideo}
-                                poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
+                        <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
+
+                            <div>
+                                <SubHeadingComponent>16mm video</SubHeadingComponent>
+                                <div className="justify-center m-6 bg-yellow-bright border-2 border-black transition duration-150 ease-in-out">
+                                    <VideoComponent className="w-96" src={placeholderVideo} poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
+                                </div>
+                            </div>
+                            <div>
+                                <SubHeadingComponent>Documentation of the project</SubHeadingComponent>
+                                <div className="h-96 relative group flex justify-center items-center m-6 bg-pink-bright border-2 border-black transition duration-150 ease-in-out">
+                                    <ImageComponent className="w-96" src={installationHeading} />
+                                    <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out">
+                                        <span className="text-pink-bright text-xl text-center p-4">
+                                            Belly Belly Bread is up until 30/6 <br />Please visit the real show<br /> <br />Documentation will only be uploaded afterwards
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
+
+
                     </div>
+
                 </div>
+                {/* Rolling text */}
+                <RollingText text="Trigger warning: deals with mental illness" />
             </div>
+
             <Footer />
         </>
     )

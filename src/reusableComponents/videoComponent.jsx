@@ -32,7 +32,7 @@ export const VideoComponent = ({ src, controls = true, autoPlay = false, classNa
                 onClick={handleOverlayClick}
             >
                 {/* Overlay Content */}
-                <div className="text-white bg-black bg-opacity-50 p-2 rounded">
+                <div className="bg-pink-bright text-yellow-bright bg-opacity-70 hover:bg-orange-bright p-2 transition duration-200 ease-in-out">
                     Click to play
                 </div>
             </div>
