@@ -1,6 +1,6 @@
 export const ParagraphComponent = ({ children, className }) => {
     // Combine the default Tailwind class with any additional classes provided
-    const defaultClasses = "font-sans font-medium font-lexend tracking-tighter m-6 text-black text-blue-800";
+    const defaultClasses = "font-sans text-lg font-medium font-lexend tracking-tighter m-6 text-black text-pink-bright ";
     const classes = className ? `${defaultClasses} ${className}` : defaultClasses;
 
     return (

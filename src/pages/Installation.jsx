@@ -4,6 +4,9 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
+import { VideoComponent } from "../reusableComponents/videoComponent";
+
+import placeholderVideo from "../assets/performance/placeholder_video.mp4";
 
 import installationHeading from "../assets/installation/installationHeading.png"
 export const Installation = () => {
@@ -23,11 +26,11 @@ export const Installation = () => {
                     <div className="md:w-6/12 justify-center">
 
                         <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                            <ImageComponent className="h-96" src={installationHeading} />
+                            <ImageComponent className="md:h-96" src={installationHeading} disableModal />
                         </div>
 
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
-                        <ParagraphComponent><ParagraphComponent>
+                        <ParagraphComponent>
                             You can’t hear what you do, you can only hear it in reverb, so what is coming back to you is what you here, that is correct, Not what you hear in your own head. So it’s very ”count actigt”? and it's very hard to understand ”avensiteten”? Because I have played music since I was very little, and I started to sing very late, when I was nineteen, so that thought that I couldn’t trust what I do. <br />
                             -no I start with the basics, so we have three different sound rooms”<br />
                             We have a breast sound, if this is the chest, and this is the neck and this is the head. <br />
@@ -72,13 +75,14 @@ export const Installation = () => {
                             -and I start to make an OO but I’m so nervous and the throat just stop <br />
                             -just a legato she says, <br />
                             -can you tell me what a Lagato is? I ask <br />
-                        </ParagraphComponent></ParagraphComponent>
+                        </ParagraphComponent>
                     </div>
-                </div>
-
-                <div className="flex flex-col items-center ">
-                    <div className="md:w-6/12 justify-center">
-                        <ImageComponent src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
+                    <div className="my-6 flex flex-col items-center">
+                        <div className="justify-center">
+                            <SubHeadingComponent>16mm video</SubHeadingComponent>
+                            <VideoComponent className="w-96" src={placeholderVideo}
+                                poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
+                        </div>
                     </div>
                 </div>
             </div>

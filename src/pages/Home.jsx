@@ -4,7 +4,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 
-import BellyPoster from "../assets/home/Unbenannt-5.png"
+import BellyPoster from "../assets/home/posterOnly.png"
 import belly1 from "../assets/home/belly1.png"
 import belly2 from "../assets/home/belly2.png"
 import bread from "../assets/home/bread.png"
@@ -23,18 +23,17 @@ export const Home = () => {
 
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col md:flex-row w-full justify-center items-center ">
-                        <ImageComponent className="w-full md:w-1/3" src={belly1} />
-                        <ImageComponent className="w-full md:w-1/3" src={belly2} />
-                        <ImageComponent className="w-full md:w-1/3" src={bread} />
+                        <ImageComponent className="w-full md:w-1/3" src={belly1} disableModal />
+                        <ImageComponent className="w-full md:w-1/3" src={belly2} disableModal />
+                        <ImageComponent className="w-full md:w-1/3" src={bread} disableModal />
                     </div>
+
                     <HeadingComponent>Diploma by Hedda Bauer</HeadingComponent>
-
-
                 </div>
 
                 <div className="flex flex-col items-center ">
                     <div className="md:w-6/12 justify-center">
-                        <ImageComponent src={BellyPoster} />
+                        <ImageComponent className="bg-performance-act-one w-full border-none p-0 m-0" src={BellyPoster} />
                     </div>
                 </div>
 

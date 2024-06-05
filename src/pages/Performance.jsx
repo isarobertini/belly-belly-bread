@@ -34,7 +34,7 @@ export const Performance = () => {
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
 
-                    <ImageComponent src={PerformanceHeading} />
+                    <ImageComponent className="" src={PerformanceHeading} disableModal />
 
                     <div className="my-6">
                         <SubHeadingComponent>Performance: 16, 23, 30th of June, 14h</SubHeadingComponent>

@@ -37,8 +37,8 @@ export const PerformanceAct2 = () => {
                 <div className="md:w-6/12 justify-center">
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="w-52 md:w-96" src={ActHeading} />
-                        <ImageComponent className="w-52 md:w-60" src={twoHeading} />
+                        <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
+                        <ImageComponent className="w-52 md:w-60" src={twoHeading} disableModal />
                     </div>
 
                     <div className="my-12">

@@ -1,8 +1,11 @@
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { collaborations } from "../data/CollaborationData";
+import { ThanksTo } from "../data/CollaborationData";
+import { Kurzbaugergasse } from "../data/CollaborationData";
 import { RollingText } from "../common/RollingText";
 import { ImageComponent } from "../reusableComponents/imageComponent";
+import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 
 import collaborationHeading from "../assets/collabs/collaborationHeading.png"
 
@@ -23,22 +26,40 @@ export const Collaborations = () => {
                 <div className="md:w-6/12 w-full flex flex-col items-center justify-center">
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="h-96" src={collaborationHeading} />
+                        <ImageComponent className="md:h-96" src={collaborationHeading} disableModal />
 
                     </div>
 
+
                     {/*collabs */}
-                    <div className="justify-center">
+                    <SubHeadingComponent>CREW</SubHeadingComponent>
+                    <div className="text-center">
                         {collaborations.map((collaboration, index) => (
-                            <div key={index} className="w-full md:w-auto p-2">
-                                <SubHeadingComponent>{collaboration.name}</SubHeadingComponent>
+                            <div key={index} className="w-full md:w-auto">
+                                <ParagraphComponent>{collaboration.name}</ParagraphComponent>
                             </div>
                         ))}
 
                     </div>
-                    <div className="m-6">
-                        {/*thanks to */}
-                        <SubHeadingComponent>Also many thanks to name name name name name name name namename name name namename name name name</SubHeadingComponent>
+                    {/*Thanks to */}
+                    <SubHeadingComponent>SPECIAL THANKS TO</SubHeadingComponent>
+                    <div className="text-left flex flex-wrap space-x-4">
+                        {ThanksTo.map((ThanksTo, index) => (
+                            <div key={index} className="">
+                                <ParagraphComponent>{ThanksTo.name}</ParagraphComponent>
+                            </div>
+                        ))}
+
+                    </div>
+                    {/*Kurzbg */}
+                    <SubHeadingComponent>WORKSHOP TEACHERS AT KBG</SubHeadingComponent>
+                    <div className="text-left flex flex-wrap space-x-4">
+                        {Kurzbaugergasse.map((Kurzbaugergasse, index) => (
+                            <div key={index} className="w-full md:w-auto">
+                                <ParagraphComponent>{Kurzbaugergasse.name}</ParagraphComponent>
+                            </div>
+                        ))}
+
                     </div>
                 </div>
             </div>

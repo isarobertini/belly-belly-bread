@@ -1,12 +1,11 @@
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
+import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
+import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 
 import aboutHeading from "../assets/about/aboutHeading.png"
 import AboutBellyBread from "../assets/about/about.webp"
-import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
-import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 
 export const About = () => {
     return (
@@ -25,19 +24,34 @@ export const About = () => {
                 <div className="md:w-6/12 justify-center">
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="h-96" src={aboutHeading} />
+                        <ImageComponent className="md:h-96" src={aboutHeading} disableModal />
 
                     </div>
 
-
                     <ImageComponent src={AboutBellyBread} />
-
 
                     <SubHeadingComponent>Text by Mark reflecting on Hedda Bauers art work</SubHeadingComponent>
 
-                    <SubHeadingComponent>Floorplan</SubHeadingComponent>
+                    <div className="flex flex-col items-center">
+                        <div className="">
+                            <ImageComponent src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
+                            <ParagraphComponent>Work by Lexie Smith</ParagraphComponent>
+                        </div>
+                    </div>
 
+                    <SubHeadingComponent>Floorplan?</SubHeadingComponent>
+                    <div className="text-center my-10">
+                        <SubHeadingComponent>Contact</SubHeadingComponent>
+                        <a href="https://www.heddabauer.com/" target="_blank" rel="noopener noreferrer" className="text-pink-bright underline p-2">
+                            https://www.heddabauer.com/
+                        </a>
+                        <a href="mailto:heddabauer@gmail.com" className="text-pink-bright underline">
+                            heddabauer@gmail.com
+                        </a>
+                    </div>
                 </div>
+
+
             </div>
         </>
     )

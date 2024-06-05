@@ -14,7 +14,6 @@ import threeHeading from "../assets/performance/threeHeading.png";
 import oneHeading from "../assets/performance/oneHeading.png";
 import twoHeading from "../assets/performance/twoHeading.png";
 import Sketch from "../assets/performance/sketch.webp";
-import placeholderVideo from "../assets/performance/placeholder_video.mp4";
 
 export const PerformanceAct3 = () => {
 
@@ -38,8 +37,8 @@ export const PerformanceAct3 = () => {
                 <div className="md:w-6/12 justify-center">
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                        <ImageComponent className="w-52 md:w-96" src={ActHeading} />
-                        <ImageComponent className="w-52 md:w-60" src={threeHeading} />
+                        <ImageComponent className="w-52 md:w-96" src={ActHeading} disableModal />
+                        <ImageComponent className="w-52 md:w-60" src={threeHeading} disableModal />
                     </div>
 
                     <div className="">
@@ -52,16 +51,6 @@ export const PerformanceAct3 = () => {
                         </div>
                     </div>
 
-                    {/* Rolling text */}
-                    <RollingText text="How to find your inner diva" />
-
-                    <div className="my-6 flex flex-col items-center bg-brown-dark">
-                        <div className="md:w-6/12 justify-center">
-                            <SubHeadingComponent>30s video</SubHeadingComponent>
-                            <SubHeadingComponent>16mm currently developing in Belgium</SubHeadingComponent>
-                            <VideoComponent src={placeholderVideo} />
-                        </div>
-                    </div>
 
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
                         <div className="border-2 border-black p-4 m-4 bg-pink-light">
