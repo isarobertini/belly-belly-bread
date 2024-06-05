@@ -37,16 +37,23 @@ export const About = () => {
                     </Fade>
 
                     <Fade>
-                        <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
+                        <div className="justify-center flex md:flex-row md:space-x-6">
                             <div>
                                 <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                                <ImageComponent className="h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
+                                <ImageComponent className="lg:h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
                             </div>
 
+                            <div>
+                                <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
+                                <ImageComponent className="lg:h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
+                            </div>
                         </div>
                     </Fade>
 
-                    <div className="">
+                    <Fade>
+
+                    </Fade>
+                    <div className="flex justify-center">
                         <div>
                             <SubHeadingComponent>Text by Mark reflecting on Hedda Bauers art work</SubHeadingComponent>
                             <ParagraphComponent>In a dimly lit gallery, the scent of freshly baked bread permeates the air, inviting visitors to an extraordinary sensory experience. "The Bread of Life" installation by avant-garde artist Hedda Bauer challenges conventional boundaries between art, sustenance, and life itself.
@@ -60,17 +67,12 @@ export const About = () => {
                                 At the heart of the installation stands a communal table, laden with freshly baked bread for sharing. It serves as a meeting point for strangers and friends alike, encouraging conversations and connections over the breaking of bread. Here, Bauer emphasizes the communal aspect of bread, its role in fostering relationships and nurturing the soul.
 
                                 "The Bread of Life" is not just an installation; it is an immersive experience that celebrates the profound, everyday artistry of bread. Through this installation, Bauer elevates bread from mere sustenance to a metaphor for life's richness and interconnectedness, urging us to appreciate the beauty in the ordinary.</ParagraphComponent>
-                            <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
                         </div>
-                        <Fade>
-                            <div>
-                                <ImageComponent className="h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
-                            </div>
-                        </Fade>
+
                     </div>
 
 
-                    <SubHeadingComponent>Contact</SubHeadingComponent>
+                    <SubHeadingComponent>Contact Hedda Bauer</SubHeadingComponent>
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
                         <div className="bg-yellow-bright border-2 border-black m-2 p-2 hover:transform hover:scale-105 transition duration-300 ease-in-out">
                             <a href="https://www.heddabauer.com/" target="_blank" rel="noopener noreferrer" className="text-pink-bright underline p-2">
@@ -85,9 +87,12 @@ export const About = () => {
                     </div>
 
                 </div>
-                {/* Rolling text */}
-                <RollingText text="Trigger warning: deals with mental illness" />
+
             </div >
+            {/* Rolling text */}
+            <div className="bg-performance-act-one">
+                <RollingText text="Trigger warning: deals with mental illness" />
+            </div>
             <Footer />
         </>
     )

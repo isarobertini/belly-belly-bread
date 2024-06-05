@@ -65,7 +65,10 @@ export const Collaborations = () => {
 
                     </div>
                 </div>
-                {/* Rolling text */}
+
+            </div>
+            {/* Rolling text */}
+            <div className="bg-performance-act-one">
                 <RollingText text="Trigger warning: deals with mental illness" />
             </div>
             <Footer />
