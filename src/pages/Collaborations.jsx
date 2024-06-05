@@ -53,7 +53,7 @@ export const Collaborations = () => {
                     </div>
                     {/*Kurzbg */}
                     <SubHeadingComponent>WORKSHOP TEACHERS AT KBG</SubHeadingComponent>
-                    <div className="text-center lg:text-left lg:flex flex-wrap md:space-x-4">
+                    <div className="text-center lg:text-left lg:flex flex-wrap md:space-x-4 mb-12">
                         {Kurzbaugergasse.map((Kurzbaugergasse, index) => (
                             <div key={index} className="w-full md:w-auto">
                                 <ParagraphComponent>{Kurzbaugergasse.name}</ParagraphComponent>
@@ -63,6 +63,10 @@ export const Collaborations = () => {
                     </div>
                 </div>
             </div>
+            <footer className="text-center py-4 bg-gray-200">
+                <p className="text-gray-600 text-sm">&copy; 2024 Hedda Bauer. All Rights Reserved.</p>
+            </footer>
+
         </>
     );
 }

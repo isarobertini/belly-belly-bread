@@ -8,6 +8,7 @@ import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { RollingText } from "../common/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
+import { Footer } from "../reusableComponents/footer";
 
 import ActHeading from "../assets/performance/ActHeading.png";
 import threeHeading from "../assets/performance/threeHeading.png";
@@ -65,6 +66,7 @@ export const PerformanceAct3 = () => {
 
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

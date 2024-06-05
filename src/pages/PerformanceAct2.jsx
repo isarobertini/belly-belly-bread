@@ -8,6 +8,7 @@ import { RollingText } from "../common/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
+import { Footer } from "../reusableComponents/footer";
 
 import ActHeading from "../assets/performance/ActHeading.png";
 import twoHeading from "../assets/performance/twoHeading.png";
@@ -124,6 +125,7 @@ export const PerformanceAct2 = () => {
 
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

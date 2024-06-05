@@ -1,10 +1,10 @@
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { RollingText } from "../common/RollingText";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { useLocation } from 'react-router-dom';
+import { Footer } from "../reusableComponents/footer";
 
 import oneHeading from "../assets/performance/oneHeading.png";
 import twoHeading from "../assets/performance/twoHeading.png";
@@ -66,7 +66,7 @@ export const Performance = () => {
 
                 </div>
             </div >
-
+            <Footer />
         </>
     )
 }

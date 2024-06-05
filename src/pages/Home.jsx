@@ -1,10 +1,10 @@
 import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
-import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
+import { Footer } from "../reusableComponents/footer";
 
-import BellyPoster from "../assets/home/posterOnly.png"
+import BellyPoster from "../assets/home/Vektor-Smartobjekt.png"
 import belly1 from "../assets/home/belly1.png"
 import belly2 from "../assets/home/belly2.png"
 import bread from "../assets/home/bread.png"
@@ -28,11 +28,11 @@ export const Home = () => {
                         <ImageComponent className="w-full md:w-1/3" src={bread} disableModal />
                     </div>
 
-                    <HeadingComponent>Diploma by Hedda Bauer</HeadingComponent>
+                    <HeadingComponent>Diploma by <br />Hedda Bauer</HeadingComponent>
                 </div>
 
-                <div className="flex flex-col items-center ">
-                    <div className="md:w-6/12 justify-center">
+                <div className="flex flex-col items-center mb-12">
+                    <div className="md:w-4/12 justify-center">
                         <ImageComponent className="bg-performance-act-one w-full border-none p-0 m-0" src={BellyPoster} />
                     </div>
                 </div>
@@ -40,6 +40,7 @@ export const Home = () => {
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />
             </div >
+            <Footer />
         </>
     )
 }

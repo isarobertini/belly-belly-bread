@@ -1,10 +1,10 @@
 import { NavigationMenu } from "../common/NavigationMenu";
-import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../common/RollingText";
 import { VideoComponent } from "../reusableComponents/videoComponent";
+import { Footer } from "../reusableComponents/footer";
 
 import placeholderVideo from "../assets/performance/placeholder_video.mp4";
 
@@ -78,7 +78,7 @@ export const Installation = () => {
                         </ParagraphComponent>
                     </div>
                     <div className="my-6 flex flex-col items-center">
-                        <div className="justify-center">
+                        <div className="justify-center mb-12">
                             <SubHeadingComponent>16mm video</SubHeadingComponent>
                             <VideoComponent className="w-96" src={placeholderVideo}
                                 poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
@@ -86,6 +86,7 @@ export const Installation = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

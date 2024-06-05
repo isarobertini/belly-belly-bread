@@ -4,6 +4,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { RollingText } from "../common/RollingText";
 import { ImageComponent } from '../reusableComponents/imageComponent';
 import { ButtonComponent } from '../reusableComponents/buttonComponent';
+import { Footer } from "../reusableComponents/footer";
 
 import cookBookHeading from "../assets/cookBook/cookBookHeading.png"
 import Kokbok from "../assets/cookBook/Bakverk.pdf";
@@ -29,7 +30,7 @@ export const TheCookbook = () => {
 
     return (
         <>
-            <div className="bg-performance-act-one h-screen">
+            <div className="bg-performance-act-one h-full">
                 <div className="bg-pink-bright">
                     {/* Rolling text */}
                     <RollingText text="Trigger warning: deals with mental illness" />
@@ -48,7 +49,7 @@ export const TheCookbook = () => {
                             <SubHeadingComponent>The cookbook that Catharina Bauer (Hedda Bauer's grandmother) gave to Marika Bauer (Hedda Bauer's mom)</SubHeadingComponent>
                         </div>
                     </div>
-                    <div className="bg-performance-act-one flex flex-col items-center">
+                    <div className="bg-performance-act-one flex flex-col items-center pb-12">
                         {isMobile ? (
                             <ButtonComponent
                                 className=""
@@ -65,6 +66,7 @@ export const TheCookbook = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

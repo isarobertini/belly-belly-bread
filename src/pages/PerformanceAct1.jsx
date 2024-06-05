@@ -8,6 +8,7 @@ import { RollingText } from "../common/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { useLocation } from 'react-router-dom';
+import { Footer } from "../reusableComponents/footer";
 
 import ActHeading from "../assets/performance/ActHeading.png";
 import oneHeading from "../assets/performance/oneHeading.png";
@@ -103,6 +104,7 @@ export const PerformanceAct1 = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
