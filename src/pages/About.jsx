@@ -40,15 +40,21 @@ export const About = () => {
                     </div>
 
                     <SubHeadingComponent>Floorplan?</SubHeadingComponent>
-                    <div className="text-center my-10">
-                        <SubHeadingComponent>Contact</SubHeadingComponent>
-                        <a href="https://www.heddabauer.com/" target="_blank" rel="noopener noreferrer" className="text-pink-bright underline p-2">
-                            https://www.heddabauer.com/
-                        </a>
-                        <a href="mailto:heddabauer@gmail.com" className="text-pink-bright underline">
-                            heddabauer@gmail.com
-                        </a>
+
+                    <SubHeadingComponent>Contact</SubHeadingComponent>
+                    <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
+                        <div className="bg-yellow-bright border-2 border-black m-2 p-2">
+                            <a href="https://www.heddabauer.com/" target="_blank" rel="noopener noreferrer" className="text-pink-bright underline p-2">
+                                https://www.heddabauer.com/
+                            </a>
+                        </div>
+                        <div className="bg-yellow-bright border-2 border-black m-2 p-2">
+                            <a href="mailto:heddabauer@gmail.com" className="text-pink-bright underline">
+                                heddabauer@gmail.com
+                            </a>
+                        </div>
                     </div>
+
                 </div>
 
 

@@ -43,7 +43,7 @@ export const Collaborations = () => {
                     </div>
                     {/*Thanks to */}
                     <SubHeadingComponent>SPECIAL THANKS TO</SubHeadingComponent>
-                    <div className="text-left flex flex-wrap space-x-4">
+                    <div className="text-center lg:text-left lg:flex flex-wrap md:space-x-4">
                         {ThanksTo.map((ThanksTo, index) => (
                             <div key={index} className="">
                                 <ParagraphComponent>{ThanksTo.name}</ParagraphComponent>
@@ -53,7 +53,7 @@ export const Collaborations = () => {
                     </div>
                     {/*Kurzbg */}
                     <SubHeadingComponent>WORKSHOP TEACHERS AT KBG</SubHeadingComponent>
-                    <div className="text-left flex flex-wrap space-x-4">
+                    <div className="text-center lg:text-left lg:flex flex-wrap md:space-x-4">
                         {Kurzbaugergasse.map((Kurzbaugergasse, index) => (
                             <div key={index} className="w-full md:w-auto">
                                 <ParagraphComponent>{Kurzbaugergasse.name}</ParagraphComponent>
