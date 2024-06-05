@@ -19,6 +19,7 @@ export const ImageComponent = ({ src, alt, className, disableModal = false, ...p
 
     return (
         <>
+
             <img
                 src={src}
                 alt={alt}
@@ -33,6 +34,7 @@ export const ImageComponent = ({ src, alt, className, disableModal = false, ...p
                     </div>
                 </Modal>
             )}
+
         </>
     );
 };

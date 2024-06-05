@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const VideoComponent = ({ src, controls = true, autoPlay = false, className, poster, ...props }) => {
     // Combine the default Tailwind class with any additional classes provided

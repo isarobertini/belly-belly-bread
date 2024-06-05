@@ -66,7 +66,6 @@ export const Collaborations = () => {
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />
             </div>
-
             <Footer />
         </>
     );

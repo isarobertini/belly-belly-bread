@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 
 export const SubSubHeadingComponent = ({ children, className }) => {
     // Combine the default Tailwind class with any additional classes provided
@@ -5,6 +6,8 @@ export const SubSubHeadingComponent = ({ children, className }) => {
     const classes = className ? `${defaultClasses} ${className}` : defaultClasses;
 
     return (
-        <h2 className={classes}>{children}</h2>
+        <Fade>
+            <h2 className={classes}>{children}</h2>
+        </Fade>
     );
 };
