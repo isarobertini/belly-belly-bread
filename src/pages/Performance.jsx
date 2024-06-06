@@ -7,6 +7,8 @@ import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { useLocation } from 'react-router-dom';
 import { Footer } from "../reusableComponents/footer";
+import { crew } from "../data/CollaborationData";
+import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 
 import oneHeading from "../assets/performance/oneHeading.png";
 import twoHeading from "../assets/performance/twoHeading.png";
@@ -71,6 +73,16 @@ export const Performance = () => {
                             )}
                         </div>
                     </Fade>
+                    {/*collabs */}
+                    <SubHeadingComponent>CREW</SubHeadingComponent>
+                    <div className="text-center">
+                        {crew.map((crew, index) => (
+                            <div key={index} className="w-full md:w-auto">
+                                <ParagraphComponent>{crew.name}</ParagraphComponent>
+                            </div>
+                        ))}
+
+                    </div>
                 </div>
             </div >
             <Footer />

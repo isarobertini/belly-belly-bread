@@ -35,7 +35,7 @@ export const Collaborations = () => {
                     </Fade>
 
                     {/*collabs */}
-                    <SubHeadingComponent>CREW</SubHeadingComponent>
+                    <SubHeadingComponent>COLLABORATORIAL PIECES IN THE INSTALLATION</SubHeadingComponent>
                     <div className="text-center">
                         {collaborations.map((collaboration, index) => (
                             <div key={index} className="w-full md:w-auto">
@@ -55,7 +55,7 @@ export const Collaborations = () => {
 
                     </div>
                     {/*Kurzbg */}
-                    <SubHeadingComponent>WORKSHOP TEACHERS AT KBG</SubHeadingComponent>
+                    <SubHeadingComponent>WORKSHOP TEACHERS & ASSISTANTS AT KBG</SubHeadingComponent>
                     <div className="text-center lg:text-left lg:flex flex-wrap md:space-x-4 mb-12">
                         {Kurzbaugergasse.map((Kurzbaugergasse, index) => (
                             <div key={index} className="w-full md:w-auto">

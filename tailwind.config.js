@@ -14,7 +14,7 @@ export default {
       colors: {
         'pink-light': '#FBACE9',
         'pink-bright': '#F83FA1',
-        'yellow-bright': '#FFF443',
+        'yellow-bright': '#F1F80A',
         'orange-bright': '#FF5500',
         'brown-dark': '#1a0100',
         'brown-light': '#8D5222',

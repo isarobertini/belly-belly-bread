@@ -26,7 +26,7 @@ export const Modal = ({ isOpen, onClose, children }) => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50" onClick={handleClose}>
             <div className="relative">
                 <button
-                    className="absolute top-0 right-0 m-2 text-white text-2xl"
+                    className="absolute top-0 right-0 m-2 text-orange-bright text-2xl"
                     onClick={onClose}
                 >
                     &times;
