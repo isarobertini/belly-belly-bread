@@ -5,7 +5,7 @@ import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { SoundComponent } from "../reusableComponents/soundComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
@@ -117,11 +117,11 @@ export const PerformanceAct2 = () => {
 
                     <Fade>
                         <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                            <div className="border-2 border-black p-4 m-4 bg-pink-light">
+                            <div className="border-2 border-black p-4 m-4 bg-pink-light hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="h-48" src={oneHeading} />
                                 <ButtonComponent to="/performance/act1" label="Go to Act 1" />
                             </div>
-                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
+                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="w-28 h-48" src={threeHeading} />
                                 <ButtonComponent to="/performance/act3" label="Go to Act 3" />
                             </div>

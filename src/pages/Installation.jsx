@@ -4,7 +4,7 @@ import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
 
@@ -27,12 +27,21 @@ export const Installation = () => {
                 <div className="flex flex-col items-center">
                     <div className="md:w-6/12 justify-center">
 
+                        {/* Heading */}
                         <Fade>
                             <div className="flex flex-col md:flex-row w-full justify-center items-center">
                                 <ImageComponent className="md:h-96" src={installationHeading} disableModal />
                             </div>
                         </Fade>
+                        <Fade>
+                            <div>
+                                <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
+                                <ImageComponent className="transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
 
+                            </div>
+                        </Fade>
+
+                        {/* Transcript of opera lesson*/}
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
                         <ParagraphComponent>
                             You can’t hear what you do, you can only hear it in reverb, so what is coming back to you is what you here, that is correct, Not what you hear in your own head. So it’s very ”count actigt”? and it's very hard to understand ”avensiteten”? Because I have played music since I was very little, and I started to sing very late, when I was nineteen, so that thought that I couldn’t trust what I do. <br />
@@ -82,12 +91,14 @@ export const Installation = () => {
                         </ParagraphComponent>
                     </div>
 
+                    {/* Video and Documentation*/}
                     <Fade>
                         <div className="my-6 flex flex-col items-center">
                             <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
                                 <div>
                                     <SubHeadingComponent>16mm video</SubHeadingComponent>
                                     <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-yellow-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
+                                        {/* Video*/}
                                         <VideoComponent className="w-96" src={placeholderVideo} poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
                                         <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out">
                                             <span className="text-yellow-bright font-lexend tracking-tighter text-xl text-center p-4">
@@ -97,6 +108,8 @@ export const Installation = () => {
                                     </div>
                                 </div>
                                 <div>
+
+                                    {/* Documentation */}
                                     <SubHeadingComponent>Documentation of the project</SubHeadingComponent>
                                     <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-pink-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
                                         <ImageComponent className="w-96" src={installationHeading} />

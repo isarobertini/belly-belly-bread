@@ -1,34 +1,39 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 export const Modal = ({ isOpen, onClose, children }) => {
-    useEffect(() => {
-        if (isOpen) {
-            // Add overflow-hidden to body when modal is open
-            document.body.classList.add('overflow-hidden');
-        } else {
-            // Remove overflow-hidden from body when modal is closed
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        // Cleanup: Remove event listener when component unmounts
-        return () => {
-            document.body.classList.remove('overflow-hidden');
-        };
-    }, [isOpen]);
-
     if (!isOpen) return null;
 
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-            <div className="relative bg-white rounded-lg max-w-full max-h-full flex items-center justify-center">
+    const handleClose = (e) => {
+        if (e.target === e.currentTarget) {
+            onClose();
+        }
+    };
+
+    useEffect(() => {
+        const handleEsc = (event) => {
+            if (event.keyCode === 27) {
+                onClose();
+            }
+        };
+        window.addEventListener('keydown', handleEsc);
+        return () => {
+            window.removeEventListener('keydown', handleEsc);
+        };
+    }, [onClose]);
+
+    return ReactDOM.createPortal(
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50" onClick={handleClose}>
+            <div className="relative">
                 <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                    className="absolute top-0 right-0 m-2 text-white text-2xl"
                     onClick={onClose}
                 >
                     &times;
                 </button>
                 {children}
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };

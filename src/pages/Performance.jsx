@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { useLocation } from 'react-router-dom';
@@ -35,9 +35,13 @@ export const Performance = () => {
 
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
+
+                    {/* Heading */}
                     <Fade>
                         <ImageComponent className="" src={PerformanceHeading} disableModal />
                     </Fade>
+
+                    {/* SubHeading */}
                     <div className="my-6">
                         <SubHeadingComponent>Performance: 16, 23, 30th of June, 14h</SubHeadingComponent>
                         <SubHeadingComponent>Kurzbaugergasse 9, 1020 Wien</SubHeadingComponent>

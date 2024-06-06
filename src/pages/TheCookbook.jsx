@@ -3,13 +3,13 @@ import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { ImageComponent } from '../reusableComponents/imageComponent';
 import { ButtonComponent } from '../reusableComponents/buttonComponent';
 import { Footer } from "../reusableComponents/footer";
 
 import cookBookHeading from "../assets/cookBook/cookBookHeading.png"
-import Kokbok from "../assets/cookBook/Bakverk.pdf";
+import Kokbok from "../assets/cookBook/Bakverk_new.pdf";
 
 export const TheCookbook = () => {
     const [isMobile, setIsMobile] = useState(false);

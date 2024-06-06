@@ -17,6 +17,7 @@ export const ThanksTo = [
     { name: "Asya" },
     { name: "Charlotta" },
     { name: "Sne Fridur" },
+    { name: "Andreas" },
 ];
 
 export const Kurzbaugergasse = [

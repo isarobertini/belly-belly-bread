@@ -5,7 +5,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { collaborations } from "../data/CollaborationData";
 import { ThanksTo } from "../data/CollaborationData";
 import { Kurzbaugergasse } from "../data/CollaborationData";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { Footer } from "../reusableComponents/footer";

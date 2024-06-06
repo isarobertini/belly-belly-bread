@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { Footer } from "../reusableComponents/footer";
 
 import BellyPoster from "../assets/home/Vektor-Smartobjekt.png"
@@ -25,6 +25,7 @@ export const Home = () => {
 
                 <RollingText scrollamount="3" text="crunchy crunchy maybe add some butter" />
 
+                {/* Heading */}
                 <div className="flex flex-col items-center">
                     <Fade>
                         <div className="flex flex-col md:flex-row w-full justify-center items-center ">
@@ -35,7 +36,7 @@ export const Home = () => {
                     </Fade>
                     <HeadingComponent>Diploma by <br />Hedda Bauer</HeadingComponent>
                 </div>
-
+                {/* Poster */}
                 <Fade>
                     <div className="flex flex-col items-center mb-12">
                         <div className="md:w-4/12 justify-center">

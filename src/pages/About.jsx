@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { ImageComponent } from "../reusableComponents/imageComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { Footer } from "../reusableComponents/footer";
@@ -23,9 +23,10 @@ export const About = () => {
                 <RollingText scrollamount="3" text="it's not about you" />
             </div>
 
+
             <div className="h-auto flex flex-col items-center bg-performance-act-one">
                 <div className="md:w-6/12 justify-center">
-
+                    {/* Heading */}
                     <Fade>
                         <div className="flex flex-col md:flex-row w-full justify-center items-center">
                             <ImageComponent className="md:h-96" src={aboutHeading} disableModal />
@@ -33,31 +34,19 @@ export const About = () => {
                     </Fade>
 
                     <Fade>
-                        <ImageComponent src={AboutBellyBread} />
+                        <ImageComponent src={AboutBellyBread} disableModal />
                     </Fade>
-
-
+                    {/* Floorplan and Breadpic */}
                     <div className="flex flex-col items-center bg-performance-act-one">
+                        <Fade>
+                            <div>
+                                <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
+                                <ImageComponent className="" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
 
-                        <div>
-
-                            <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                            <ImageComponent className="lg:h-96 w-80 transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
-
-                        </div>
-
-
-
-                        <div>
-
-                            <SubHeadingComponent>Work by Lexie Smith</SubHeadingComponent>
-                            <ImageComponent className="lg:h-96 w-80" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzA3MzgzNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTczOTMzNDAzMH0.PRKjSo6w0KsIQ8z7RRqt0vKs9EiDtUTPmSyS6lCJ1FM/img.jpg?width=1200&height=800&quality=100&coordinates=7%2C0%2C7%2C0" />
-
-                        </div>
+                            </div>
+                        </Fade>
                     </div>
-
-
-
+                    {/* Marks text */}
                     <div className="flex justify-center">
                         <div>
                             <SubHeadingComponent>Text by Mark reflecting on Hedda Bauers art work</SubHeadingComponent>
@@ -73,10 +62,9 @@ export const About = () => {
 
                                 "The Bread of Life" is not just an installation; it is an immersive experience that celebrates the profound, everyday artistry of bread. Through this installation, Bauer elevates bread from mere sustenance to a metaphor for life's richness and interconnectedness, urging us to appreciate the beauty in the ordinary.</ParagraphComponent>
                         </div>
-
                     </div>
 
-
+                    {/* Contact */}
                     <SubHeadingComponent>Contact Hedda Bauer</SubHeadingComponent>
                     <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
                         <div className="bg-yellow-bright border-2 border-black m-2 p-2 hover:transform hover:scale-105 transition duration-300 ease-in-out">
@@ -90,7 +78,6 @@ export const About = () => {
                             </a>
                         </div>
                     </div>
-
                 </div>
 
             </div >

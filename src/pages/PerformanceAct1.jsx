@@ -5,7 +5,7 @@ import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { useLocation } from 'react-router-dom';
@@ -97,11 +97,11 @@ export const PerformanceAct1 = () => {
                         </div>
 
                         <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                            <div className="border-2 border-black p-4 m-4 bg-orange-bright">
+                            <div className="border-2 border-black p-4 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="h-48" src={twoHeading} />
                                 <ButtonComponent to="/performance/act2" label="Go to Act 2" />
                             </div>
-                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright">
+                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="w-28 h-48" src={threeHeading} />
                                 <ButtonComponent to="/performance/act3" label="Go to Act 3" />
                             </div>

@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { NavigationMenu } from "../common/NavigationMenu";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
-import { RollingText } from "../common/RollingText";
+import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { Footer } from "../reusableComponents/footer";
@@ -58,11 +58,11 @@ export const PerformanceAct3 = () => {
 
                     <Fade>
                         <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                            <div className="border-2 border-black p-4 m-4 bg-pink-light">
+                            <div className="border-2 border-black p-4 m-4 bg-pink-light hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="h-48" src={oneHeading} />
                                 <ButtonComponent to="/performance/act1" label="Go to Act 1" />
                             </div>
-                            <div className="border-2 border-black p-4 m-4 bg-orange-bright">
+                            <div className="border-2 border-black p-4 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                                 <ImageComponent className="h-48" src={twoHeading} />
                                 <ButtonComponent to="/performance/act2" label="Go to Act 2" />
                             </div>
