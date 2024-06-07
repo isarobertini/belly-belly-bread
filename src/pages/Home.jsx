@@ -7,7 +7,7 @@ import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { Footer } from "../reusableComponents/footer";
 
-import BellyPoster from "../assets/home/Vektor-Smartobjekt.png"
+import BellyPoster from "../assets/home/utan_qr.png"
 import belly1 from "../assets/home/belly1.webp"
 import belly2 from "../assets/home/belly2.webp"
 import bread from "../assets/home/bread.webp"
@@ -45,7 +45,7 @@ export const Home = () => {
                 {/* Poster */}
                 <Fade>
                     <div className="flex flex-col items-center mb-12">
-                        <div className="md:w-4/12 justify-center">
+                        <div className="md:w-6/12 justify-center">
                             <ImageComponent className="bg-performance-act-one w-full border-none p-0 m-0" src={BellyPoster} />
                         </div>
                     </div>

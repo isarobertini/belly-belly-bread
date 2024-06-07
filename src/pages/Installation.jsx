@@ -10,8 +10,9 @@ import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
 
 import placeholderVideo from "../assets/installation/placeholder_video.mp4";
-import floorPlan from "../assets/installation/floorplan.webp"
-import installationHeading from "../assets/installation/installationHeading.webp"
+import floorPlan from "../assets/installation/floorplan.webp";
+import installationHeading from "../assets/installation/installationHeading.webp";
+
 export const Installation = () => {
     return (
         <>
@@ -25,14 +26,14 @@ export const Installation = () => {
                 <RollingText text="Trigger warning: deals with mental illness" />
                 <NavigationMenu />
             </div>
-            <div className="bg-performance-act-one overflow-hidden">
+
+            <div className="w-full bg-performance-act-one overflow-hidden">
                 <RollingText scrollamount="3" text="cry like the crying bread table" />
             </div>
 
             <div className="bg-performance-act-one">
                 <div className="flex flex-col items-center">
                     <div className="md:w-6/12 justify-center">
-
                         {/* Heading */}
                         <Fade>
                             <div className="flex flex-col md:flex-row w-full justify-center items-center">
@@ -43,12 +44,15 @@ export const Installation = () => {
                             <div>
                                 <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
                                 <ImageComponent className="transition duration-150 hover:scale-105 ease-in-out" src={floorPlan} />
-                                <ParagraphComponent>Hey Hedda,
-                                    the desk is from Lennart Schweder, he made it for his flat where he moved in with Laura Hinrichsmeyer, when I remember right, he is Best Basil</ParagraphComponent>
                             </div>
                         </Fade>
+                    </div>
 
-                        {/* Transcript of opera lesson*/}
+                    <div className="w-full bg-performance-act-one overflow-hidden my-12">
+                        <RollingText scrollamount="5" text="the desk is from Lennart Schweder" />
+                    </div>
+                    <div className="md:w-6/12 justify-center">
+                        {/* Transcript of opera lesson */}
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
                         <ParagraphComponent>
                             You can’t hear what you do, you can only hear it in reverb, so what is coming back to you is what you here, that is correct, Not what you hear in your own head. So it’s very ”count actigt”? and it's very hard to understand ”avensiteten”? Because I have played music since I was very little, and I started to sing very late, when I was nineteen, so that thought that I couldn’t trust what I do. <br />
@@ -98,14 +102,14 @@ export const Installation = () => {
                         </ParagraphComponent>
                     </div>
 
-                    {/* Video and Documentation*/}
+                    {/* Video and Documentation */}
                     <Fade>
                         <div className="my-6 flex flex-col items-center">
                             <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
                                 <div>
                                     <SubHeadingComponent>16mm video</SubHeadingComponent>
                                     <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-yellow-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
-                                        {/* Video*/}
+                                        {/* Video */}
                                         <VideoComponent className="w-96" src={placeholderVideo} poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
                                         <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out">
                                             <span className="text-yellow-bright font-lexend tracking-tighter text-xl text-center p-4">
@@ -115,7 +119,6 @@ export const Installation = () => {
                                     </div>
                                 </div>
                                 <div>
-
                                     {/* Documentation */}
                                     <SubHeadingComponent>Documentation of the project</SubHeadingComponent>
                                     <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-pink-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
@@ -137,5 +140,5 @@ export const Installation = () => {
             </div>
             <Footer />
         </>
-    )
+    );
 }
