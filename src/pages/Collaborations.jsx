@@ -83,30 +83,33 @@ export const Collaborations = () => {
                                         <ParagraphComponent className="text-yellow-bright">
                                             {collaboration.description}
                                         </ParagraphComponent>
-                                        {/* Render images */}
-                                        <div className="flex justify-between mx-2">
-                                            <div className="group relative">
-                                                <img className="w-52 bg-yellow-bright border-2 border-black" src={collaboration.image1} alt="Image 1" />
-                                                <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-                                                    <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
-                                                        Documentation will be uploaded once the show is over. Please visit the real show in the meantime
-                                                    </span>
+
+                                        <div className="my-6 flex flex-col items-center">
+                                            <div className="flex flex-col lg:flex-row lg:justify-center lg:space-x-6">
+                                                {/* Render images */}
+                                                <div className="group relative mb-4 lg:mb-0 mx-2 lg:mx-0">
+                                                    <img className="bg-yellow-bright w-52 border-2 border-black" src={collaboration.image2} alt="Image 2" />
+                                                    <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                                                        <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
+                                                            Documentation will be uploaded once the show is over. Please visit the real show in the meantime
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="group relative mx-2">
-                                                <img className="bg-pink-bright w-52 border-2 border-black" src={collaboration.image2} alt="Image 2" />
-                                                <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-                                                    <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
-                                                        Documentation will be uploaded once the show is over. Please visit the real show in the meantime
-                                                    </span>
+                                                <div className="group relative mb-4 lg:mb-0 mx-2 lg:mx-0">
+                                                    <img className="bg-pink-bright w-52 border-2 border-black" src={collaboration.image2} alt="Image 2" />
+                                                    <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                                                        <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
+                                                            Documentation will be uploaded once the show is over. Please visit the real show in the meantime
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="group relative mx-2">
-                                                <img className="w-52 bg-orange-bright border-2 border-black" src={collaboration.image3} alt="Image 3" />
-                                                <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-                                                    <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
-                                                        Documentation will be uploaded once the show is over. Please visit the real show in the meantime
-                                                    </span>
+                                                <div className="group relative mb-4 lg:mb-0 mx-2 lg:mx-0">
+                                                    <img className="w-52 bg-orange-bright border-2 border-black" src={collaboration.image3} alt="Image 3" />
+                                                    <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                                                        <span className="font-lexend tracking-tighter text-yellow-bright text-s text-center p-4">
+                                                            Documentation will be uploaded once the show is over. Please visit the real show in the meantime
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
