@@ -57,7 +57,7 @@ export const TheCookbook = () => {
                                 </div>
                             </Fade>
 
-                            <SubHeadingComponent>The cookbook that Catharina Bauer (Hedda Bauer's grandmother) gave to Marika Bauer (Hedda Bauer's mom)</SubHeadingComponent>
+                            <SubHeadingComponent>The cookbook that Catharina Bauer, Hedda Bauer's grandmother, gave to Marika Bauer, Hedda Bauer's mother.</SubHeadingComponent>
                         </div>
                     </div>
 
