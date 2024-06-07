@@ -8,9 +8,9 @@ import { RollingText } from "../reusableComponents/RollingText";
 import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
 
-import placeholderVideo from "../assets/performance/placeholder_video.mp4";
-
-import installationHeading from "../assets/installation/installationHeading.png"
+import placeholderVideo from "../assets/installation/placeholder_video.mp4";
+import floorPlan from "../assets/installation/floorplan.webp"
+import installationHeading from "../assets/installation/installationHeading.webp"
 export const Installation = () => {
     return (
         <>
@@ -36,8 +36,9 @@ export const Installation = () => {
                         <Fade>
                             <div>
                                 <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                                <ImageComponent className="transition duration-150 hover:scale-105 ease-in-out" src="https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2019/07/simple-stylish.png" />
-
+                                <ImageComponent className="transition duration-150 hover:scale-105 ease-in-out" src={floorPlan} />
+                                <ParagraphComponent>Hey Hedda,
+                                    the desk is from Lennart Schweder, he made it for his flat where he moved in with Laura Hinrichsmeyer, when I remember right, he is Best Basil</ParagraphComponent>
                             </div>
                         </Fade>
 

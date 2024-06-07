@@ -8,7 +8,7 @@ import { ImageComponent } from '../reusableComponents/imageComponent';
 import { ButtonComponent } from '../reusableComponents/buttonComponent';
 import { Footer } from "../reusableComponents/footer";
 
-import cookBookHeading from "../assets/cookBook/cookBookHeading.png"
+import cookBookHeading from "../assets/cookBook/cookBookHeading.webp"
 import Kokbok from "../assets/cookBook/Bakverk_new.pdf";
 
 export const TheCookbook = () => {

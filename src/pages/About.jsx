@@ -7,7 +7,7 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { Footer } from "../reusableComponents/footer";
 
-import aboutHeading from "../assets/about/aboutHeading.png"
+import aboutHeading from "../assets/about/aboutHeading.webp"
 import AboutBellyBread from "../assets/about/about.webp"
 
 export const About = () => {

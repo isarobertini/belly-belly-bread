@@ -8,13 +8,12 @@ import { SoundComponent } from "../reusableComponents/soundComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
-import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { Footer } from "../reusableComponents/footer";
+import { Acts } from "../common/Acts";
 
-import ActHeading from "../assets/performance/ActHeading.png";
-import twoHeading from "../assets/performance/twoHeading.png";
-import oneHeading from "../assets/performance/oneHeading.png";
-import threeHeading from "../assets/performance/threeHeading.png";
+import Stein from "../assets/performance/Stein.webp"
+import ActHeading from "../assets/performance/ActHeading.webp";
+import twoHeading from "../assets/performance/twoHeading.webp";
 import SoundLiftingBelly from "../assets/performance/SoundLiftingBelly.m4a";
 
 export const PerformanceAct2 = () => {
@@ -48,6 +47,12 @@ export const PerformanceAct2 = () => {
                     <div className="my-12">
                         <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 2</SubSubHeadingComponent>
                         <SubSubHeadingComponent className="text-orange-bright">Diva Poem</SubSubHeadingComponent>
+
+                        <div className="bg-performance-act-one flex items-center justify-center">
+                            <div className="w-52 border-2 border-black p-0 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
+                                <ImageComponent src={Stein} />
+                            </div>
+                        </div>
                         <SubSubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubSubHeadingComponent>
 
                         <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1913-1927) by Gertrude Stein</ParagraphComponent>
@@ -112,21 +117,9 @@ export const PerformanceAct2 = () => {
                             The diva crew
                             The diva moo
                         </ParagraphComponent>
-
                     </div>
 
-                    <Fade>
-                        <div className="flex flex-col md:flex-row w-full justify-center items-center mb-12">
-                            <div className="border-2 border-black p-4 m-4 bg-pink-light hover:transform hover:scale-105 transition duration-300 ease-in-out">
-                                <ImageComponent className="h-48" src={oneHeading} />
-                                <ButtonComponent to="/performance/act1" label="Go to Act 1" />
-                            </div>
-                            <div className="border-2 border-black p-4 m-4 bg-yellow-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
-                                <ImageComponent className="w-28 h-48" src={threeHeading} />
-                                <ButtonComponent to="/performance/act3" label="Go to Act 3" />
-                            </div>
-                        </div>
-                    </Fade>
+                    <Acts />
                 </div>
             </div>
             <Footer />

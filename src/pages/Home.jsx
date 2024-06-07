@@ -7,9 +7,9 @@ import { RollingText } from "../reusableComponents/RollingText";
 import { Footer } from "../reusableComponents/footer";
 
 import BellyPoster from "../assets/home/Vektor-Smartobjekt.png"
-import belly1 from "../assets/home/belly1.png"
-import belly2 from "../assets/home/belly2.png"
-import bread from "../assets/home/bread.png"
+import belly1 from "../assets/home/belly1.webp"
+import belly2 from "../assets/home/belly2.webp"
+import bread from "../assets/home/bread.webp"
 import "../../src/font.css"
 
 export const Home = () => {

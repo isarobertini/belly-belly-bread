@@ -14,7 +14,7 @@ export const NavigationMenu = () => {
     };
 
     return (
-        <div className={`ffont-lexend tracking-tighter h-24 bg-pink-bright flex items-center justify-between px-6 top-0 z-20`}>
+        <div className={`font-lexend tracking-tighter h-24 bg-pink-bright flex items-center justify-between px-6 top-0 z-20`}>
             {/* Navigation */}
             <nav className="flex w-full justify-between lg:justify-center text-2xl">
                 {/* Desktop Menu */}
