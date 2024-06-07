@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { HeadingComponent } from "../reusableComponents/headingComponent";
@@ -15,6 +16,11 @@ import "../../src/font.css"
 export const Home = () => {
     return (
         <>
+            <Helmet>
+                <title>Hedda Bauer's Diploma | Belly Belly Bread</title>
+                <meta name="description" content="Welcome to Hedda Bauer's diploma project at Belly Belly Bread. Explore the artistic journey through this immersive experience. Trigger warning: deals with mental illness." />
+            </Helmet>
+
 
             <div className="bg-pink-bright">
                 {/* Rolling text */}

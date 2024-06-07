@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { ImageComponent } from "../reusableComponents/imageComponent";
@@ -13,6 +14,11 @@ import AboutBellyBread from "../assets/about/about.webp"
 export const About = () => {
     return (
         <>
+            <Helmet>
+                <title>About - Belly Belly Bread</title>
+                <meta name="description" content="Learn more about Belly Belly Bread, featuring work by Lexie Smith, text by Mark reflecting on Hedda Bauer's artwork, and contact information for Hedda Bauer. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />

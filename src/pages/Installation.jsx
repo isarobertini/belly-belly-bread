@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -14,6 +15,11 @@ import installationHeading from "../assets/installation/installationHeading.webp
 export const Installation = () => {
     return (
         <>
+            <Helmet>
+                <title>Installation - Belly Belly Bread</title>
+                <meta name="description" content="Explore the installation section of Belly Belly Bread, featuring the floor plan, transcript of opera lessons, 16mm video, and documentation of the project. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -26,6 +27,11 @@ export const PerformanceAct1 = () => {
 
     return (
         <>
+
+            <Helmet>
+                <title>Performance Act 1 - Belly Belly Bread</title>
+                <meta name="description" content="Experience Act 1 of Belly Belly Bread's performance featuring 'The Letter' by Catharina Bauer. Trigger warning: deals with mental illness." />
+            </Helmet>
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />

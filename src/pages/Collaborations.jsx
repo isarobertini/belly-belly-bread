@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -26,6 +27,18 @@ export const Collaborations = () => {
 
     return (
         <>
+            <Helmet>
+                {collaborations.map((collaboration, index) => (
+                    <title key={index}>{collaboration.name} - Collaborations | Belly Belly Bread</title>
+                ))}
+                {ThanksTo.map((person, index) => (
+                    <title key={index}>{person.name} - Collaborations | Belly Belly Bread</title>
+                ))}
+                {Kurzbaugergasse.map((person, index) => (
+                    <title key={index}>{person.name} - Collaborations | Belly Belly Bread</title>
+                ))}
+            </Helmet>
+
             <div className="bg-pink-bright">
                 <RollingText text="Trigger warning: deals with mental illness" />
                 <NavigationMenu />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -32,6 +33,11 @@ export const TheCookbook = () => {
 
     return (
         <>
+            <Helmet>
+                <title>The Cookbook - Belly Belly Bread</title>
+                <meta name="description" content="Explore the cookbook that Catharina Bauer gave to Marika Bauer, featuring recipes and insights. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-performance-act-one h-full">
                 <div className="bg-pink-bright">
                     {/* Rolling text */}

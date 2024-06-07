@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -15,6 +16,11 @@ export const Performance = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Performance - Belly Belly Bread</title>
+                <meta name="description" content="Join us for the performance of Belly Belly Bread featuring operette in 3 acts on June 16th, 23rd, and 30th at Kurzbaugergasse 9, 1020 Wien. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />

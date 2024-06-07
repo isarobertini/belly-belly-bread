@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
@@ -24,6 +25,11 @@ export const PerformanceAct2 = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Performance Act 2 - Belly Belly Bread</title>
+                <meta name="description" content="Experience Act 2 of Belly Belly Bread's performance featuring 'Diva Poem' by Hedda Bauer, inspired by Gertrude Stein's 'Lifting Belly'. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />

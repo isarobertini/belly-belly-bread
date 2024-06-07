@@ -1,19 +1,17 @@
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 import { NavigationMenu } from "../common/NavigationMenu";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
-import { ButtonComponent } from "../reusableComponents/buttonComponent";
 import { Footer } from "../reusableComponents/footer";
 import { Acts } from "../common/Acts";
 
 import ActHeading from "../assets/performance/ActHeading.webp";
 import threeHeading from "../assets/performance/threeHeading.webp";
-import oneHeading from "../assets/performance/oneHeading.webp";
-import twoHeading from "../assets/performance/twoHeading.webp";
 import Sketch from "../assets/performance/sketch.webp";
 import Callas from "../assets/performance/Callas.webp"
 
@@ -25,6 +23,11 @@ export const PerformanceAct3 = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Performance Act 3 - Belly Belly Bread</title>
+                <meta name="description" content="Discover how to find your inner diva with Act 3 of Belly Belly Bread's performance featuring Maria Callas. Trigger warning: deals with mental illness." />
+            </Helmet>
+
             <div className="bg-pink-bright">
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />
