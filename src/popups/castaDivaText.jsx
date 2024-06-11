@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { SubHeadingComponent } from '../reusableComponents/subHeadingComponent';
 import { ParagraphComponent } from '../reusableComponents/paragraphComponent';
 
-export const CookBookPopup = () => {
+export const CastaDivaText = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const popupRef = useRef(null);
 
@@ -31,9 +31,36 @@ export const CookBookPopup = () => {
                             >
                                 &times;
                             </button>
-                            <SubHeadingComponent>About Prinsessornas kokbok</SubHeadingComponent>
+                            <SubHeadingComponent>Norma: Casta Diva- Lyrics</SubHeadingComponent>
                             <ParagraphComponent>
-                                Prinsessornas kokbok is a classic work of Swedish cookery literature, written by Jenny Åkerström-Söderström. The first edition was published in 1929. Jenny Åkerström ran a home economics school for young girls in Stockholm in the last half of the 20th century. Among the pupils were Princesses Margaretha, Märtha and Astrid, daughters of Prince Carl and Princess Ingeborg. Åkerström dedicated the cookery book to the princesses and the book was published in many editions during the 1930s, 40s and 50s. The book included a cake called "Green Cake", which the princesses are said to have been particularly fond of and which later became known as princess cake. To give the cookbook a royal flavour, Jenny Åkerström let readers know what the princesses thought of the various dishes in the book.
+                                Casta Diva, che inargenti <br />
+                                queste sacre antiche piante,<br />
+                                a noi volgi il bel sembiante<br />
+                                senza nube e senza vel...<br />
+                                Tempra, o Diva,<br />
+                                tempra tu de cori ardenti<br />
+                                tempra ancora lo zelo audace,<br />
+                                spargi in terra quella pace<br />
+                                che regnar tu fai nel ciel...<br />
+                                Fine al rito : e il sacro bosco<br />
+                                Sia disgombro dai profani.<br />
+                                Quando il Nume irato e fosco<br />
+                                Chiegga il sangue dei Romani,<br />
+                                Dal Druidico delubro<br />
+                                La mia voce tuoner .<br />
+                                Cadr ; punirlo io posso.<br />
+                                (Ma, punirlo, il cor non sa.<br />
+                                Ah! bello a me ritorna<br />
+                                Del fido amor primiero;<br />
+                                E contro il mondo intiero...<br />
+                                Difesa a te sar.<br />
+                                Ah! bello a me ritorna<br />
+                                Del raggio tuo sereno;<br />
+                                E vita nel tuo seno,<br />
+                                E patria e cielo avr .<br />
+                                Ah, riedi ancora qual eri allora,<br />
+                                Quando il cor ti diedi allora,<br />
+                                Ah, riedi a me.)<br />
                             </ParagraphComponent>
                         </div>
                     </div>
@@ -45,7 +72,7 @@ export const CookBookPopup = () => {
                     onClick={togglePopup}
                     className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow z-50 text-center bg-pink-bright text-yellow-bright font-lexend tracking-tighter text-md leading-tight uppercase shadow-md hover:bg-orange-bright hover:shadow-lg focus:bg-black focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
                 >
-                    About The Cookbook
+                    Norma: Casta Diva- Lyrics
                 </button>
             )}
         </div>

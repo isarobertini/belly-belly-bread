@@ -20,7 +20,7 @@ export const TitlesPopup = () => {
                 <div>
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={handleClose}></div>
                     <div className="m-3 fixed inset-0 flex items-center justify-center z-50">
-                        <div ref={popupRef} className="bg-performance-act-one border-2 border-yellow-bright p-8 rounded shadow-lg relative max-h-screen overflow-y-auto">
+                        <div ref={popupRef} className="bg-performance-act-one border-2 border-yellow-bright p-8 shadow-lg relative max-h-screen overflow-y-auto">
                             <button
                                 onClick={handleClose}
                                 className="absolute top-0 right-0 mt-2 mr-2 text-orange-bright hover:text-gray-700"

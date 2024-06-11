@@ -60,6 +60,7 @@ export const ThanksTo = [
     { name: "Charlotta (she, her)" },
     { name: "Sne Fridur" },
     { name: "Djoana Gueorguineva" },
+    { name: "Kofi Møller" },
 ];
 //Import this about
 export const Kurzbaugergasse = [

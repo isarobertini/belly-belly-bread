@@ -9,6 +9,7 @@ import { RollingText } from "../reusableComponents/RollingText";
 import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingComponent";
 import { Footer } from "../reusableComponents/footer";
 import { Acts } from "../common/Acts";
+import { CastaDivaText } from "../popups/castaDivaText";
 
 import ActHeading from "../assets/performance/ActHeading.webp";
 import threeHeading from "../assets/performance/threeHeading.webp";
@@ -49,6 +50,9 @@ export const PerformanceAct3 = () => {
                     </Fade>
 
                     <div className="">
+
+                        <CastaDivaText />
+
                         <div className="my-12">
                             <SubSubHeadingComponent className="text-orange-bright underline decoration-solid">Act 3</SubSubHeadingComponent>
                             <SubSubHeadingComponent className="text-orange-bright">3 rooms</SubSubHeadingComponent>

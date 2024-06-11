@@ -22,7 +22,7 @@ export const MaterialPopup = () => {
                     <div className="m-3 fixed inset-0 flex items-center justify-center z-50">
                         <div
                             ref={popupRef}
-                            className="bg-performance-act-one border-2 border-yellow-bright p-8 rounded shadow-lg relative max-h-screen overflow-y-auto"
+                            className="bg-performance-act-one border-2 border-yellow-bright p-8 shadow-lg relative max-h-screen overflow-y-auto"
                         >
                             <button
                                 onClick={handleClose}
