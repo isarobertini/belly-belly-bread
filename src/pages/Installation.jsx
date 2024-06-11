@@ -15,6 +15,7 @@ import placeholderVideo from "../assets/installation/placeholder_video.mp4";
 import floorPlan1 from "../assets/installation/floorplan1.webp";
 import floorPlan2 from "../assets/installation/floorplan2.webp";
 import floorPlan3 from "../assets/installation/floorplan3.webp";
+import Materials from "../assets/installation/materials.png";
 import installationHeading from "../assets/installation/installationHeading.webp";
 
 
@@ -50,7 +51,10 @@ export const Installation = () => {
                         </Fade>
                         <Fade>
                             <div>
-                                <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
+                                <SubHeadingComponent>Floorplan of Belly Belly Bread</SubHeadingComponent>
+                                <div className="text-center">
+                                    <ParagraphComponent>Made by Hedda Bauer in collaboration with Kofi</ParagraphComponent>
+                                </div>
                                 <div className="flex flex-col md:flex-row w-full justify-center items-center">
                                     <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan2} />
                                     <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan3} />
@@ -63,6 +67,17 @@ export const Installation = () => {
                     <div className="w-full bg-performance-act-one overflow-hidden my-12">
                         <RollingText scrollamount="5" text="the desk is from Lennart Schweder" />
                     </div>
+                    <div className="w-full mb-12 bg-performance-act-one overflow-hidden">
+                        <RollingText
+                            scrollamount="2"
+                            text="some materials"
+                            imageUrl={Materials}
+                            height="150px"
+                            imgWidth="120px"
+                            imgHeight="120px"
+                        />
+                    </div>
+
                     <div className="md:w-6/12 justify-center">
                         {/* Transcript of opera lesson */}
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
