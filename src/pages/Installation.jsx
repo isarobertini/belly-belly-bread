@@ -8,10 +8,15 @@ import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
+import { MaterialPopup } from "../popups/MaterialPopup";
+import { TitlesPopup } from "../popups/titlesPopup";
 
 import placeholderVideo from "../assets/installation/placeholder_video.mp4";
-import floorPlan from "../assets/installation/floorplan.webp";
+import floorPlan1 from "../assets/installation/floorplan1.webp";
+import floorPlan2 from "../assets/installation/floorplan2.webp";
+import floorPlan3 from "../assets/installation/floorplan3.webp";
 import installationHeading from "../assets/installation/installationHeading.webp";
+
 
 export const Installation = () => {
     return (
@@ -32,7 +37,10 @@ export const Installation = () => {
             </div>
 
             <div className="bg-performance-act-one">
+
                 <div className="flex flex-col items-center">
+                    <TitlesPopup />
+                    <MaterialPopup />
                     <div className="md:w-6/12 justify-center">
                         {/* Heading */}
                         <Fade>
@@ -43,7 +51,11 @@ export const Installation = () => {
                         <Fade>
                             <div>
                                 <SubHeadingComponent>Floorplan Belly Belly Bread</SubHeadingComponent>
-                                <ImageComponent className="transition duration-150 hover:scale-105 ease-in-out" src={floorPlan} />
+                                <div className="flex flex-col md:flex-row w-full justify-center items-center">
+                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan2} />
+                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan3} />
+                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan1} />
+                                </div>
                             </div>
                         </Fade>
                     </div>

@@ -18,7 +18,9 @@ export const Performance = () => {
         <>
             <Helmet>
                 <title>Performance - Belly Belly Bread</title>
-                <meta name="description" content="Join us for the performance of Belly Belly Bread featuring operette in 3 acts on June 16th, 23rd, and 30th at Kurzbaugergasse 9, 1020 Wien. Trigger warning: deals with mental illness." />
+                <meta name="description" content="Join us for the performance of Belly Belly Bread featuring operette in 3 acts on June 16th, 23rd, and 30th at Kurzbaugergasse 9, 1020 Wien. Trigger warning: deals with mental illness.Crew: Hedda Bauer, Freja Gøetke, Isa Robertini, Charlotta Öberg
+                Kiki Loukhine"
+                />
             </Helmet>
 
             <div className="bg-pink-bright">
@@ -28,7 +30,7 @@ export const Performance = () => {
             </div>
 
             <div className="bg-performance-act-one">
-                <RollingText scrollamount="3" text="prrrrrrr prrrrrrrr prrrrrrrrrrrrrrrrr" />
+                <RollingText scrollamount="3" text="brrrrrrr brrrrrrrr brrrrrrrrrrrrrrrrr" />
             </div>
 
             <div className="flex flex-col items-center bg-performance-act-one">

@@ -1,5 +1,4 @@
 import { Fade } from "react-awesome-reveal";
-
 import { Link } from 'react-router-dom';
 
 export const ButtonComponent = ({ to, label, onClick }) => {

@@ -8,6 +8,7 @@ import { RollingText } from "../reusableComponents/RollingText";
 import { ImageComponent } from '../reusableComponents/imageComponent';
 import { ButtonComponent } from '../reusableComponents/buttonComponent';
 import { Footer } from "../reusableComponents/footer";
+import { CookBookPopup } from '../popups/cookBookPopup';
 
 import cookBookHeading from "../assets/cookBook/cookBookHeading.webp"
 import Kokbok from "../assets/cookBook/Bakverk_new.pdf";
@@ -47,6 +48,8 @@ export const TheCookbook = () => {
                 <div className="bg-performance-act-one overflow-hidden">
                     <RollingText scrollamount="3" text="mmmmm" />
                 </div>
+
+                <CookBookPopup />
                 <div>
                     <div className="flex flex-col items-center">
                         <div className="md:w-6/12 justify-center">
@@ -56,8 +59,9 @@ export const TheCookbook = () => {
                                     <ImageComponent className="h-96" src={cookBookHeading} disableModal />
                                 </div>
                             </Fade>
-
-                            <SubHeadingComponent>The cookbook that Catharina Bauer, Hedda Bauer's grandmother, gave to Marika Bauer, Hedda Bauer's mother.</SubHeadingComponent>
+                            <div className='my-10'>
+                                <SubHeadingComponent>The cookbook that Catharina Bauer, Hedda Bauer's grandmother, gave to Marika Bauer, Hedda Bauer's mother.</SubHeadingComponent>
+                            </div>
                         </div>
                     </div>
 

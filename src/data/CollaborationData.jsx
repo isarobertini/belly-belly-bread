@@ -4,7 +4,7 @@ export const crew = [
     { name: "Freja Gøetke (she, her), Light Technician" },
     { name: "Isa Robertini (she, her), Time Technician" },
     { name: "Charlotta Öberg (she, her), Costume Technician" },
-    { name: "Kirill Tscheluchin (he, him) + Sound Technician" },
+    { name: "Kiki Loukhine (he, they) + Sound Technician" },
 ];
 export const collaborations = [
     {
@@ -36,8 +36,8 @@ export const collaborations = [
         image3: "https://img.icons8.com/?size=100&id=j1UxMbqzPi7n&format=png&color=1A1A1A",
     },
     {
-        name: "Kirill Tscheluchin (he, him) + Hedda Bauer, Sound Work",
-        description: "Kirill Tscheluchin collaborated with Hedda Bauer on sound design and production, enhancing the project with immersive audio elements and music.",
+        name: "Kiki Loukhine (he, they) + Hedda Bauer, Sound Work",
+        description: "Kiki Loukhine collaborated with Hedda Bauer on sound design and production, enhancing the project with immersive audio elements and music.",
         image1: "https://img.icons8.com/?size=100&id=j1UxMbqzPi7n&format=png&color=1A1A1A",
         image2: "https://img.icons8.com/?size=100&id=j1UxMbqzPi7n&format=png&color=1A1A1A",
         image3: "https://img.icons8.com/?size=100&id=j1UxMbqzPi7n&format=png&color=1A1A1A",

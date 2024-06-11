@@ -1,4 +1,4 @@
-import papper from "../assets/performance/papper.jpg"
+import { Fade } from "react-awesome-reveal";
 
 export const SubHeadingComponent = ({ children, className }) => {
     // Combine the default Tailwind class with any additional classes provided
@@ -6,6 +6,8 @@ export const SubHeadingComponent = ({ children, className }) => {
     const classes = className ? `${defaultClasses} ${className}` : defaultClasses;
 
     return (
+        <Fade>
         <h2 className={classes}>{children}</h2>
+        </Fade>
     );
 };
