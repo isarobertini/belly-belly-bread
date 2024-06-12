@@ -61,7 +61,7 @@ export const PerformanceAct2 = () => {
                         </div>
                         <SubSubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubSubHeadingComponent>
 
-                        <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1913-1927) by Gertrude Stein</ParagraphComponent>
+                        <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1915-1917) by Gertrude Stein</ParagraphComponent>
                     </div>
 
                     <div className="flex flex-col items-center">
@@ -74,54 +74,8 @@ export const PerformanceAct2 = () => {
                         <SubHeadingComponent>By Hedda Bauer</SubHeadingComponent>
 
                         <ParagraphComponent>
-                            The diva sleeping
-                            The diva breathing
-                            The diva scattering
-                            The diva dripping
-                            The diva numbing
-                            The diva soothing
-                            The diva trembling
-                            The diva strong
-                            The diva thong
-                            My diva cooking
-
-                            The diva sensuous
-                            The diva rhythm
-                            The diva's cycles
-
-                            The diva funny
-                            And the diva bunny
-
-                            The diva hands
-                            The diva mouth
-                            The diva head
-                            The diva chest
-
-                            The diva size
-                            The diva thighs
-
-                            The diva sick
-                            And the diva kicks
-
-                            The diva bread
-                            The diva belly
-                            The diva head
-
-                            The diva cow
-                            The diva now
-
-                            The diva back
-                            The diva rack
-                            The diva attack
-
-                            The diva ground
-                            The diva dips
-
-                            The diva smack
-                            The diva track
-
-                            The diva crew
-                            The diva moo
+                            The Diva sleeping The Diva breathing The Diva
+                            scattering, The Diva dripping The Diva numbing The Diva soothing, The Diva trembling The Diva strong The Diva thong, The Diva sensuous The Diva rhythm The Diva‘s cycles, The Diva funny And the Diva bunny, The Diva hands The Diva mouth The Diva head, The Diva chest The Diva size The Diva thighs, The Diva six And the Diva kicks, The Diva bread The Diva belly The Diva head, The Diva cow The Diva now, The diva rack The Diva attack, The Diva ground The Diva dips The Diva smack The Diva track, The Diva crew and The Diva moo
                         </ParagraphComponent>
                     </div>
 
