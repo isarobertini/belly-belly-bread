@@ -16,7 +16,8 @@ export const Materials = [
     { name: "OSB wood" },
     { name: "Plaster" },
     { name: "Rope" },
-    { name: "Fat boys" },
+    { name: "Pillows" },
     { name: "Terrazzo table with metal legs" },
     { name: "Oven dish" },
+    { name: "Hand winch" },
 ];

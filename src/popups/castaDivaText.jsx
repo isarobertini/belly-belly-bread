@@ -32,6 +32,8 @@ export const CastaDivaText = () => {
                                 &times;
                             </button>
                             <SubHeadingComponent>Norma: Casta Diva- Lyrics</SubHeadingComponent>
+                            <SubHeadingComponent> Aria by Vincenzo Bellini</SubHeadingComponent>
+
                             <ParagraphComponent>
                                 Casta Diva, che inargenti <br />
                                 queste sacre antiche piante,<br />

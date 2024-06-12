@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { SubHeadingComponent } from '../reusableComponents/subHeadingComponent';
-import { Titles } from '../data/titlesData';
+import { TitlesAtHome, TitlesAtTheGallery } from '../data/titlesData';
 
 export const TitlesPopup = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -12,6 +12,15 @@ export const TitlesPopup = () => {
 
     const handleClose = () => {
         setIsPopupOpen(false);
+    };
+
+    const renderArtists = (item) => {
+        if (item.artist) {
+            return <span className="text-sm text-gray-500">, Artist: {item.artist}</span>;
+        } else if (item.artists) {
+            return <span className="text-sm text-gray-500">, Artists: {item.artists.join(' and ')}</span>;
+        }
+        return null;
     };
 
     return (
@@ -27,12 +36,33 @@ export const TitlesPopup = () => {
                             >
                                 &times;
                             </button>
-                            <SubHeadingComponent>Titles <br />”the dinner table set”</SubHeadingComponent>
-                            <ul className="grid grid-cols-2 sm:grid-cols-2 gap-2 list-none pt-3 text-pink-bright font-lexend tracking-tighter text-md leading-tight">
-                                {Titles.map((item, index) => (
-                                    <li key={index} className="">{item.name}</li>
-                                ))}
-                            </ul>
+
+                            <div className="pt-3">
+                                <div className="flex justify-between md:mx-20">
+                                    <h2 className="font-sans font-medium text-2xl font-lexend tracking-tighter text-center text-orange-bright">Titles at Home</h2>
+                                    <h2 className="font-sans font-medium text-2xl font-lexend tracking-tighter text-center text-orange-bright">Titles at the Gallery</h2>
+                                </div>
+
+                                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-2 list-none pt-1 text-pink-bright font-lexend tracking-tighter text-md leading-tight">
+                                    {TitlesAtHome.map((item, index) => (
+                                        <li key={index}>
+                                            {item.name}
+                                            {renderArtists(item)}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="pt-3">
+                                <h2 className="text-pink-bright font-lexend tracking-tighter text-md leading-tight">Titles at the Gallery</h2>
+                                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-2 list-none pt-1 text-pink-bright font-lexend tracking-tighter text-md leading-tight">
+                                    {TitlesAtTheGallery.map((item, index) => (
+                                        <li key={index}>
+                                            {item.name}
+                                            {renderArtists(item)}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
