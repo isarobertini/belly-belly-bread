@@ -26,4 +26,3 @@ export const TitlesAtTheGallery = [
     { name: "The Counter Mother", artist: "Hedda Bauer" },
     { name: "The Baking Paper Lamps", artists: ["Julia Kronberger", "Hedda Bauer"] }
 ];
-

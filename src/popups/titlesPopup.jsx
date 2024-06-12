@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import { SubHeadingComponent } from '../reusableComponents/subHeadingComponent';
 import { TitlesAtHome, TitlesAtTheGallery } from '../data/titlesData';
@@ -21,6 +22,16 @@ export const TitlesPopup = () => {
             return <span className="text-sm text-gray-500">, Artists: {item.artists.join(' and ')}</span>;
         }
         return null;
+    };
+
+    const renderItems = (items) => {
+        return (
+            <ul className="pl-4">
+                {items.map((subItem, subIndex) => (
+                    <li key={subIndex} className="text-sm text-gray-700">{subItem}</li>
+                ))}
+            </ul>
+        );
     };
 
     return (
@@ -48,6 +59,7 @@ export const TitlesPopup = () => {
                                         <li key={index}>
                                             {item.name}
                                             {renderArtists(item)}
+                                            {item.items && renderItems(item.items)}
                                         </li>
                                     ))}
                                 </ul>
