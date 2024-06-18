@@ -7,7 +7,7 @@ import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { Footer } from "../reusableComponents/footer";
 
-import BellyPoster from "../assets/home/utan_qr.png"
+import BellyPoster from "../assets/home/utan_qr.jpg"
 import belly1 from "../assets/home/belly1.webp"
 import belly2 from "../assets/home/belly2.webp"
 import bread from "../assets/home/bread.webp"

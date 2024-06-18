@@ -29,13 +29,13 @@ export const Collaborations = () => {
         <>
             <Helmet>
                 {collaborations.map((collaboration, index) => (
-                    <title key={index}>{collaboration.name} - Collaborations | Belly Belly Bread</title>
+                    <title key={index}>Collaborations | Belly Belly Bread -{collaboration.name} </title>
                 ))}
                 {ThanksTo.map((person, index) => (
-                    <title key={index}>{person.name} - Collaborations | Belly Belly Bread</title>
+                    <title key={index}> Collaborations | Belly Belly Bread -{person.name}</title>
                 ))}
                 {Kurzbaugergasse.map((person, index) => (
-                    <title key={index}>{person.name} - Collaborations | Belly Belly Bread</title>
+                    <title key={index}> Collaborations | Belly Belly Bread -{person.name}</title>
                 ))}
             </Helmet>
 

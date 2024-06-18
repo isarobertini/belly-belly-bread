@@ -10,7 +10,7 @@ import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
 import { MaterialPopup } from "../popups/MaterialPopup";
 import { TitlesPopup } from "../popups/titlesPopup";
-
+import { Gallery } from "../imgGallery/imgGallery"
 import placeholderVideo from "../assets/installation/placeholder_video.mp4";
 import floorPlan1 from "../assets/installation/floorplan1.webp";
 import floorPlan2 from "../assets/installation/floorplan2.webp";
@@ -78,8 +78,30 @@ export const Installation = () => {
                         />
                     </div>
 
-                    <div className="md:w-6/12 justify-center">
+                    <div className="my-12 md:w-6/12 justify-center">
                         {/* Transcript of opera lesson */}
+                        <div className="">
+                            {/* Video */}
+                            <SubHeadingComponent>16mm film of the performance</SubHeadingComponent>
+                            <VideoComponent className="" src={placeholderVideo} controls />
+                        </div>
+                    </div>
+                    {/* Video and Documentation */}
+                    <Fade>
+                        <div className="my-12 flex flex-col items-center">
+                            <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
+                                <div>
+                                    {/* Documentation Gallery */}
+                                    <SubHeadingComponent>Documentation of the installation</SubHeadingComponent>
+                                    <Gallery />
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </Fade>
+
+                    <div className="md:w-6/12 justify-center">
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
                         <ParagraphComponent>
                             You can’t hear what you do, you can only hear it in reverb, so what is coming back to you is what you here, that is correct, Not what you hear in your own head. So it’s very ”count actigt”? and it's very hard to understand ”avensiteten”? Because I have played music since I was very little, and I started to sing very late, when I was nineteen, so that thought that I couldn’t trust what I do. <br />
@@ -129,42 +151,11 @@ export const Installation = () => {
                         </ParagraphComponent>
                     </div>
 
-                    {/* Video and Documentation */}
-                    <Fade>
-                        <div className="my-6 flex flex-col items-center">
-                            <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
-                                <div>
-                                    <SubHeadingComponent>16mm video</SubHeadingComponent>
-                                    <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-yellow-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
-                                        {/* Video */}
-                                        <VideoComponent className="w-96" src={placeholderVideo} poster="https://img.icons8.com/isometric-line/100/film-reel.png" />
-                                        <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out">
-                                            <span className="text-yellow-bright font-lexend tracking-tighter text-xl text-center p-4">
-                                                This video is currently developing in Belgium
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    {/* Documentation */}
-                                    <SubHeadingComponent>Documentation of the project</SubHeadingComponent>
-                                    <div className="h-96 w-80 relative group flex justify-center items-center m-6 bg-pink-bright border-2 border-black transition duration-150 hover:scale-105 ease-in-out">
-                                        <ImageComponent className="w-96" src={installationHeading} />
-                                        <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out">
-                                            <span className="font-lexend tracking-tighter text-yellow-bright text-xl text-center p-4">
-                                                Belly Belly Bread is up until 30/6 <br />Please visit the real show<br /> <br />Documentation will only be uploaded afterwards
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Fade>
                 </div>
 
                 {/* Rolling text */}
                 <RollingText text="Trigger warning: deals with mental illness" />
-            </div>
+            </div >
             <Footer />
         </>
     );

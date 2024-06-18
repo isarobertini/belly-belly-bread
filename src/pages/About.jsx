@@ -44,6 +44,20 @@ export const About = () => {
                     </Fade>
                     <div>
                         <div className="my-12">
+                            <SubHeadingComponent>About the work</SubHeadingComponent>
+                        </div>
+
+                        <ParagraphComponent>
+                            Belly Belly Bread is a durational performance and installation work set in the room "At the home" EG.23 at Kurzbauergasse 9, 1020 Wien.<br />
+                            During the Diploma period (16 th-30 th of june 2024) Hedda Bauer are embodying the Character "The Diva" and performing a micro opera in 3 acts together with 4 co-performers called "The Crew".<br />
+                            Every Sunday  "The Diva" presents one out of three act, when "The Diva" is not present  a sound installation is looped in the room, inviting the visitors to lay down in soft pillows with tea and a buttered knäckebread  and charge their phones.
+                            <br /><br />
+                            Aside from the sunday performances Belly Belly Bread contains collaborative art pieces by Hedda Bauer and their friends and classmates at the Akademie Der Bildenden Künste Wien.
+                            One floor up, "At the gallery" Hedda Bauer shows the wall pieces " The real bread art"; backing paper that contains burned traces of the knäckebread.
+                            <br /><br />
+                            You are welcome to visit the universe of Belly Belly Bread!
+                        </ParagraphComponent>
+                        <div className="my-12">
                             <SubHeadingComponent>Prinsessornas Nya Kokbok<br /> Preface</SubHeadingComponent>
                         </div>
 
