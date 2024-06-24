@@ -72,7 +72,7 @@ export const PerformanceAct1 = () => {
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="my-12 md:w-6/12 justify-center ">
                     <ParagraphComponent className="">
-                        A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook.
+                        A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook  "Prinsessornas Nya Kokbok" by Jenny Åkerström ( Published 1948 ).
                     </ParagraphComponent>
 
                     <Fade>

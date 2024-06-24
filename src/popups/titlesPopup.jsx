@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { SubHeadingComponent } from '../reusableComponents/subHeadingComponent';
 import { TitlesAtHome, TitlesAtTheGallery } from '../data/titlesData';
@@ -49,31 +48,34 @@ export const TitlesPopup = () => {
                             </button>
 
                             <div className="pt-3">
-                                <div className="flex justify-between md:mx-20">
-                                    <h2 className="font-sans font-medium text-2xl font-lexend tracking-tighter text-center text-orange-bright">Titles at Home</h2>
+                                <div className="flex flex-col md:flex-row justify-between md:mx-20">
+                                    <h2 className="font-sans font-medium text-2xl font-lexend tracking-tighter text-center text-orange-bright md:mb-0 mb-4">Titles at Home</h2>
                                     <h2 className="font-sans font-medium text-2xl font-lexend tracking-tighter text-center text-orange-bright">Titles at the Gallery</h2>
                                 </div>
 
-                                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-2 list-none pt-1 text-pink-bright font-lexend tracking-tighter text-md leading-tight">
-                                    {TitlesAtHome.map((item, index) => (
-                                        <li key={index}>
-                                            {item.name}
-                                            {renderArtists(item)}
-                                            {item.items && renderItems(item.items)}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="pt-3">
-                                <h2 className="text-pink-bright font-lexend tracking-tighter text-md leading-tight">Titles at the Gallery</h2>
-                                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-2 list-none pt-1 text-pink-bright font-lexend tracking-tighter text-md leading-tight">
-                                    {TitlesAtTheGallery.map((item, index) => (
-                                        <li key={index}>
-                                            {item.name}
-                                            {renderArtists(item)}
-                                        </li>
-                                    ))}
-                                </ul>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6">
+                                    <div>
+                                        <ul className="list-none text-pink-bright font-lexend tracking-tighter text-md leading-tight">
+                                            {TitlesAtHome.map((item, index) => (
+                                                <li key={index} className="mb-2">
+                                                    {item.name}
+                                                    {renderArtists(item)}
+                                                    {item.items && renderItems(item.items)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul className="list-none text-pink-bright font-lexend tracking-tighter text-md leading-tight">
+                                            {TitlesAtTheGallery.map((item, index) => (
+                                                <li key={index} className="mb-2">
+                                                    {item.name}
+                                                    {renderArtists(item)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

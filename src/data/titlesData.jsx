@@ -6,12 +6,14 @@ export const TitlesAtHome = [
     { name: "The Loaf-ers", artist: "Hedda Bauer" },
     { name: "The Bread Shoe Mould", artist: "Hedda Bauer" },
     { name: "The Diva Bread Costume", artists: ["Freja Wesik", "Hedda Bauer"] },
+    { name: "The Belly Belly Bread Merchandise", artists: ["Freja Wesik", "Hedda Bauer"] },
     { name: "The Three Rooms", artist: "Hedda Bauer" },
     { name: "The Belly Pillows", artists: ["Freja Wesik", "Hedda Bauer"] },
     { name: "The Belly Sound Installation", artists: ["Kiki", "Hedda Bauer"] },
-    { name: "The Bread Bar", artists: ["Red Huemer", "Hedda Bauer"] },
+    { name: "The Bread Bar", artists: ["Red Huemer", "Hedda Bauer", "+result of a bread baking workshop"] },
     {
         name: "The Dinner Table Set",
+        artist: "Hedda Bauer",
         items: [
             "The Serve-Board",
             "The Bread-Time-Plate",

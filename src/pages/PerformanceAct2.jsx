@@ -61,7 +61,7 @@ export const PerformanceAct2 = () => {
                         </div>
                         <SubSubHeadingComponent className="text-orange-bright">Protagonist: Gertrude Stein</SubSubHeadingComponent>
 
-                        <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (1915-1917) by Gertrude Stein</ParagraphComponent>
+                        <ParagraphComponent>Hedda Bauer reading "Lifting Belly" (written 1915-1917) and Pulished 1953 by Gertrude Stein</ParagraphComponent>
                     </div>
 
                     <div className="flex flex-col items-center">
