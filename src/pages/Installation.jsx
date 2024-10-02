@@ -87,19 +87,19 @@ export const Installation = () => {
                         </div>
                     </div>
                     {/* Video and Documentation */}
-                    <Fade>
-                        <div className="my-12 flex flex-col items-center">
-                            <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
-                                <div>
-                                    {/* Documentation Gallery */}
-                                    <SubHeadingComponent>Documentation of the installation</SubHeadingComponent>
-                                    <Gallery />
 
-                                </div>
+                    <div className="my-12 flex flex-col items-center">
+                        <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
+                            <div>
+                                {/* Documentation Gallery */}
+                                <SubHeadingComponent>Documentation of the installation</SubHeadingComponent>
+                                <Gallery />
 
                             </div>
+
                         </div>
-                    </Fade>
+                    </div>
+
 
                     <div className="md:w-6/12 justify-center">
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>

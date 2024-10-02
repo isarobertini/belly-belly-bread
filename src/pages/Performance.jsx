@@ -14,21 +14,33 @@ import { client } from "../../contentfulClient";  // Import Contentful client
 import PerformanceHeading from "../assets/performance/performanceHeading.webp";
 
 export const Performance = () => {
-    const [subTitle, setSubtitle] = useState('');  // State to hold the fetched Subtitle
+    const [performanceTitle, setPerformanceTitle] = useState('');  // State to hold the fetched performance title
     const [crewTitle, setCrewTitle] = useState('');  // State to hold the fetched CrewTitle
-    const [crewNames, setCrewNames] = useState('');  // State to hold the fetched crew names (string)
+    const [crewNames, setCrewNames] = useState([]);  // State to hold the fetched crew names (array)
 
     useEffect(() => {
-        // Fetch the entry from Contentful
-        client.getEntry('6hEQWyNcrjKfQdEIN8HldT')
-            .then((entry) => {
+        const fetchEntry = async () => {
+            try {
+                // Fetch the entry from Contentful
+                const entry = await client.getEntry('1YWx52ugnMuA9XV3s6KVmi');
                 console.log('Fetched entry:', entry); // Log the entire entry to check its structure
-                setSubtitle(entry.fields.subTitle || '');
+
+                // Set performanceTitle and crewTitle
+                setPerformanceTitle(entry.fields.performanceTitle || '');
                 setCrewTitle(entry.fields.crewTitle || '');
-                console.log('Fetched crewNames:', entry.fields.crewNames); // Log crewNames to verify its structure
-                setCrewNames(entry.fields.crewNames || '');
-            })
-            .catch(err => console.error(err));
+
+                // Since crewNames is a List type, it should already be an array in the API response
+                if (Array.isArray(entry.fields.crewNames)) {
+                    setCrewNames(entry.fields.crewNames);  // Set the array to state
+                } else {
+                    console.error('crewNames is not an array or is undefined');
+                }
+            } catch (err) {
+                console.error('Error fetching entry:', err);
+            }
+        };
+
+        fetchEntry();
     }, []);
 
     return (
@@ -57,8 +69,7 @@ export const Performance = () => {
 
                     {/* SubHeading */}
                     <div className="my-6">
-                        <SubHeadingComponent>{subTitle}</SubHeadingComponent>
-
+                        <SubHeadingComponent>{performanceTitle}</SubHeadingComponent>
                     </div>
 
                     <Acts />
@@ -68,8 +79,13 @@ export const Performance = () => {
 
                     {/* Crew Names */}
                     <div className="text-center">
-                        {crewNames ? (
-                            <ParagraphComponent >{crewNames}</ParagraphComponent>
+                        {crewNames.length > 0 ? (
+                            // Map over the crewNames array to display each name in a separate row
+                            crewNames.map((name, index) => (
+                                <ParagraphComponent key={index} className="my-2">
+                                    {name}
+                                </ParagraphComponent>
+                            ))
                         ) : (
                             <p>No crew names available.</p>
                         )}
