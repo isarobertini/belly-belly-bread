@@ -76,6 +76,7 @@ export const PerformanceAct1 = () => {
 
                     <SubSubHeadingComponent className="underline decoration-solid">{data.title}</SubSubHeadingComponent>
                     <SubSubHeadingComponent>{data.subTitle}</SubSubHeadingComponent>
+
                     <div className="bg-performance-act-one flex items-center justify-center">
                         <div className="w-52 border-2 border-black p-0 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                             <ImageComponent src={Bauer} />
@@ -137,6 +138,7 @@ export const PerformanceAct1 = () => {
                                     const { fields } = item; // Access fields of the documentation item
                                     const assetUrl = fields.file?.url; // Assuming the structure contains a 'file' field
                                     const assetTitle = fields.title || "Document"; // Use a title if available
+                                    const assetDescription = fields.description || ""; // Extract description or set default to empty
 
                                     if (fields.file.contentType.startsWith('video/')) {
                                         return (
@@ -145,14 +147,16 @@ export const PerformanceAct1 = () => {
                                                     <source src={assetUrl} type={fields.file.contentType} />
                                                     Your browser does not support the video tag.
                                                 </video>
-                                                <ParagraphComponent>{assetTitle}</ParagraphComponent>
+                                                <SubHeadingComponent>{assetTitle}</SubHeadingComponent>
+                                                <ParagraphComponent>{assetDescription}</ParagraphComponent>
                                             </div>
                                         );
                                     } else if (fields.file.contentType.startsWith('image/')) {
                                         return (
                                             <div key={fields.id} className="my-4">
                                                 <ImageComponent src={assetUrl} alt={assetTitle} className="w-full md:w-8/12" />
-                                                <ParagraphComponent>{assetTitle}</ParagraphComponent>
+                                                <SubHeadingComponent>{assetTitle}</SubHeadingComponent>
+                                                <ParagraphComponent>{assetDescription}</ParagraphComponent>
                                             </div>
                                         );
                                     } else {
@@ -164,6 +168,7 @@ export const PerformanceAct1 = () => {
                             )}
                         </div>
                     </div>
+
                     <Acts />
                 </div>
             </div>

@@ -12,8 +12,8 @@ import { MaterialPopup } from "../popups/MaterialPopup";
 import { TitlesPopup } from "../popups/titlesPopup";
 import { Gallery } from "../imgGallery/imgGallery";
 import { InstallationVideo } from "../installationComponent/installationVideo";
+import { InstallationFloorplan } from "../installationComponent/installationFloorplan";
 
-import placeholderVideo from "../assets/installation/placeholder_video.mp4";
 import floorPlan1 from "../assets/installation/floorplan1.webp";
 import floorPlan2 from "../assets/installation/floorplan2.webp";
 import floorPlan3 from "../assets/installation/floorplan3.webp";
@@ -56,9 +56,8 @@ export const Installation = () => {
                                     <ParagraphComponent>Made by Hedda Bauer in collaboration with Kofi</ParagraphComponent>
                                 </div>
                                 <div className="flex flex-col md:flex-row w-full justify-center items-center">
-                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan2} />
-                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan3} />
-                                    <ImageComponent className="h-96 transition duration-150 hover:scale-105 ease-in-out" src={floorPlan1} />
+
+                                    <InstallationFloorplan />
                                 </div>
                             </div>
                         </Fade>
