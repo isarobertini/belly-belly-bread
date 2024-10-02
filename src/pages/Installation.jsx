@@ -1,3 +1,4 @@
+import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 
@@ -6,18 +7,18 @@ import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { RollingText } from "../reusableComponents/RollingText";
-import { VideoComponent } from "../reusableComponents/videoComponent";
 import { Footer } from "../reusableComponents/footer";
 import { MaterialPopup } from "../popups/MaterialPopup";
 import { TitlesPopup } from "../popups/titlesPopup";
-import { Gallery } from "../imgGallery/imgGallery"
+import { Gallery } from "../imgGallery/imgGallery";
+import { InstallationVideo } from "../installationComponent/installationVideo";
+
 import placeholderVideo from "../assets/installation/placeholder_video.mp4";
 import floorPlan1 from "../assets/installation/floorplan1.webp";
 import floorPlan2 from "../assets/installation/floorplan2.webp";
 import floorPlan3 from "../assets/installation/floorplan3.webp";
 import Materials from "../assets/installation/materials.png";
 import installationHeading from "../assets/installation/installationHeading.webp";
-
 
 export const Installation = () => {
     return (
@@ -38,7 +39,6 @@ export const Installation = () => {
             </div>
 
             <div className="bg-performance-act-one">
-
                 <div className="flex flex-col items-center">
                     <TitlesPopup />
                     <MaterialPopup />
@@ -78,28 +78,19 @@ export const Installation = () => {
                         />
                     </div>
 
-                    <div className="my-12 md:w-6/12 justify-center">
-                        {/* Transcript of opera lesson */}
-                        <div className="">
-                            {/* Video */}
-                            <SubHeadingComponent>16mm film of the performance</SubHeadingComponent>
-                            <VideoComponent className="" src={placeholderVideo} controls />
-                        </div>
-                    </div>
-                    {/* Video and Documentation */}
+                    {/* Use the InstallationVideo component here */}
+                    <InstallationVideo />
 
+                    {/* Video and Documentation */}
                     <div className="my-12 flex flex-col items-center">
                         <div className="flex flex-col md:flex-row md:justify-center md:space-x-6">
                             <div>
                                 {/* Documentation Gallery */}
                                 <SubHeadingComponent>Documentation of the installation</SubHeadingComponent>
                                 <Gallery />
-
                             </div>
-
                         </div>
                     </div>
-
 
                     <div className="md:w-6/12 justify-center">
                         <SubHeadingComponent>Transcript of opera lessons </SubHeadingComponent>
@@ -127,36 +118,13 @@ export const Installation = () => {
                             -it sits here, it's the raptor, you can feel it here (and she starts burring) <br />
                             -it's not sexual, but of course it is sexual as well, the one who says that singing is not sexual is really stupid. <br />
                             -because it is very sensual to sing, it's very sensual to sing, because you activate your backbone, and that is going up, and you just start to say oooo and burrr, can you find the feeling? <br />
-                            -there is a vibration, that is what ”bel canto” is, it's a tension, ohohohhhhhhhhhh, I feel like you know something, and you understand and I feel that with you. I think you understand <br />
-                            -This mouth (points at the mouth on the drawing) doesn’t mean a mouth but a room. And your gane, you have a ”(27.47prou game and a blou gane”) and you have a bone, here here, (she points in the mouth) and far in <br />
-                            -yes yes far away in there by the tongue I respond giggling) <br />
-                            And that is doing this”putting it up” <br />
-                            And we have so many exercises, just this burr one, A tract and O tract <br />
-                            -and we should just sing, <br />
-                            -what do you think is fun to sing? <br />
-                            -what should and would you like to say? <br />
-                            -ahhh, something easy, I respond, I am thinking so much, and judging myself so I’m open, <br />
-                            -I will just follow you, <br />
-                            -okey so we start <br />
-                            We start with a vowel <br />
-                            -and I open up and I follow her piano, <br />
-                            -try to hold for your ears and then you (23.30), and now you try to make it with one long (pgrassane?) <br />
-                            -I try to sing like walking up a step <br />
-                            -can you try, because A is kind of hard, but try to do an O <br />
-                            -it's very soft and feminine <br />
-                            -I do the OOOOOOOOO like a step <br />
-                            -and I start to make an OO but I’m so nervous and the throat just stop <br />
-                            -just a legato she says, <br />
-                            -can you tell me what a Lagato is? I ask <br />
+                            -there is a vibration, that is what ”bel canto” is, it's a tension, ohohohhhhhhhhhh, I feel like you have a lot of air, so you want to activate your throat, and you want to just stay there and just release everything.<br />
+                            -brrrrrrrrbrrrrr, you can just try to say burr while you do that, ok?  <br />
                         </ParagraphComponent>
                     </div>
-
                 </div>
-
-                {/* Rolling text */}
-                <RollingText text="Trigger warning: deals with mental illness" />
-            </div >
+            </div>
             <Footer />
         </>
     );
-}
+};

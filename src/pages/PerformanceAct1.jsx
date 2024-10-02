@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 
@@ -11,6 +11,7 @@ import { SubSubHeadingComponent } from "../reusableComponents/subSubHeadingCompo
 import { useLocation } from 'react-router-dom';
 import { Footer } from "../reusableComponents/footer";
 import { Acts } from "../common/Acts";
+import { client } from "../../contentfulClient";
 
 import ActHeading from "../assets/performance/ActHeading.webp";
 import oneHeading from "../assets/performance/oneHeading.webp";
@@ -19,11 +20,27 @@ import Bauer from "../assets/performance/Bauer.webp"
 
 export const PerformanceAct1 = () => {
 
+    const [data, setData] = useState(null); // State to hold the fetched data
+
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        // Fetch data from Contentful
+        client.getEntry('1jaZGGtohPbXD85zdD2vu9') // Replace with your entry ID
+            .then((entry) => {
+                setData(entry.fields);
+                console.log(entry.fields); // Log the fetched data to see its structure
+            })
+            .catch(console.error);
+
     }, []);
 
     const location = useLocation();
+
+    // Check if data is available before rendering
+    if (!data) {
+        return <div>Loading...</div>; // Optionally show a loading state
+    }
 
     return (
         <>
@@ -56,9 +73,9 @@ export const PerformanceAct1 = () => {
 
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="mt-12 md:w-6/12 justify-center">
-                    <SubSubHeadingComponent className="underline decoration-solid ">Act 1</SubSubHeadingComponent>
 
-                    <SubSubHeadingComponent className="">The Letter</SubSubHeadingComponent>
+                    <SubSubHeadingComponent className="underline decoration-solid">{data.title}</SubSubHeadingComponent>
+                    <SubSubHeadingComponent>{data.subTitle}</SubSubHeadingComponent>
                     <div className="bg-performance-act-one flex items-center justify-center">
                         <div className="w-52 border-2 border-black p-0 m-4 bg-orange-bright hover:transform hover:scale-105 transition duration-300 ease-in-out">
                             <ImageComponent src={Bauer} />
@@ -68,12 +85,10 @@ export const PerformanceAct1 = () => {
                 </div>
             </div>
 
-
             <div className="flex flex-col items-center bg-performance-act-one">
                 <div className="my-12 md:w-6/12 justify-center ">
-                    <ParagraphComponent className="">
-                        A letter from my grandmother Catharina Bauer to my mother. The letter was placed inside the cookbook  "Prinsessornas Nya Kokbok" by Jenny Åkerström ( Published 1948 ).
-                    </ParagraphComponent>
+
+                    <ParagraphComponent>{data.introductionParagraph}</ParagraphComponent>
 
                     <Fade>
                         <ImageComponent src={Letter} />
@@ -115,6 +130,40 @@ export const PerformanceAct1 = () => {
                         <ParagraphComponent className="indent-60">Mama</ParagraphComponent>
                     </div>
 
+                    <div className="flex flex-col items-center bg-performance-act-one">
+                        <div className="my-12 md:w-6/12 justify-center ">
+                            {data.documentation && data.documentation.length > 0 ? (
+                                data.documentation.map((item) => {
+                                    const { fields } = item; // Access fields of the documentation item
+                                    const assetUrl = fields.file?.url; // Assuming the structure contains a 'file' field
+                                    const assetTitle = fields.title || "Document"; // Use a title if available
+
+                                    if (fields.file.contentType.startsWith('video/')) {
+                                        return (
+                                            <div key={fields.id} className="m-4">
+                                                <video controls className="">
+                                                    <source src={assetUrl} type={fields.file.contentType} />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                                <ParagraphComponent>{assetTitle}</ParagraphComponent>
+                                            </div>
+                                        );
+                                    } else if (fields.file.contentType.startsWith('image/')) {
+                                        return (
+                                            <div key={fields.id} className="my-4">
+                                                <ImageComponent src={assetUrl} alt={assetTitle} className="w-full md:w-8/12" />
+                                                <ParagraphComponent>{assetTitle}</ParagraphComponent>
+                                            </div>
+                                        );
+                                    } else {
+                                        return null; // Skip if not a video or image
+                                    }
+                                })
+                            ) : (
+                                <p></p>
+                            )}
+                        </div>
+                    </div>
                     <Acts />
                 </div>
             </div>

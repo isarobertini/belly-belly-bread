@@ -1,49 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 
-import { client } from "../../contentfulClient";  // Import Contentful client
 import { NavigationMenu } from "../common/NavigationMenu";
 import { SubHeadingComponent } from "../reusableComponents/subHeadingComponent";
 import { RollingText } from "../reusableComponents/RollingText";
 import { ImageComponent } from "../reusableComponents/imageComponent";
 import { ParagraphComponent } from "../reusableComponents/paragraphComponent";
 import { Footer } from "../reusableComponents/footer";
+import { CollaborationsFetcher } from '../collaborationComponent/CollaborationsFetcher';
 
 import collaborationHeading from "../assets/collabs/collaborationHeading.webp";
 
 export const Collaborations = () => {
     const [collaborationsData, setCollaborationsData] = useState([]); // Initialize as an empty array
     const [openCollaborationIndex, setOpenCollaborationIndex] = useState(null);
-    const [loading, setLoading] = useState(true);  // Loading state to manage API fetch
 
-    // Fetch collaboration data from Contentful
-    useEffect(() => {
-        const fetchCollaborations = async () => {
-            try {
-                const response = await client.getEntry('2uB5W8WlBzAOoMmozjOcgT'); // Entry ID
-
-                const collaborationFields = response.fields; // Access the fields directly
-                const collaborationsArray = Object.keys(collaborationFields).map(key => {
-                    const collaboration = collaborationFields[key][0]?.fields; // Get the first element's fields
-                    return {
-                        id: key,
-                        name: collaboration?.title || 'No title available',
-                        description: collaboration?.description || 'No description available',
-                        file: collaboration?.file || null // Assuming there's a file object for the image
-                    };
-                }).filter(item => item.file); // Filter out collaborations without files
-
-                setCollaborationsData(collaborationsArray); // Set the combined array in state
-            } catch (error) {
-                console.error("Error fetching collaboration data from Contentful:", error);
-            } finally {
-                setLoading(false); // Set loading to false after fetch
-            }
-        };
-
-        fetchCollaborations();
-    }, []);
+    // Callback function to handle fetched data
+    const handleFetchComplete = (data) => {
+        setCollaborationsData(data); // Update state with fetched data
+    };
 
     const handleToggle = (index) => {
         if (openCollaborationIndex === index) {
@@ -52,11 +28,6 @@ export const Collaborations = () => {
             setOpenCollaborationIndex(index); // Open the clicked section
         }
     };
-
-    // Loading state - Show a loader or message while fetching data
-    if (loading) {
-        return <div>Loading collaborations...</div>;
-    }
 
     return (
         <>
@@ -84,6 +55,8 @@ export const Collaborations = () => {
                     <SubHeadingComponent>COLLABORATORIAL WORKS IN THE INSTALLATION</SubHeadingComponent>
 
                     <div className="text-center w-full">
+                        <CollaborationsFetcher onFetchComplete={handleFetchComplete} />
+
                         {collaborationsData.length > 0 ? (
                             collaborationsData.map((collaboration, index) => (
                                 <div key={collaboration.id} className="w-full md:w-auto mb-4">
@@ -103,8 +76,6 @@ export const Collaborations = () => {
 
                                     {openCollaborationIndex === index && (
                                         <div className="mt-2">
-
-
                                             <div className="my-6 flex flex-col items-center">
                                                 {collaboration.file && (
                                                     <ImageComponent
